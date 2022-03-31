@@ -12,8 +12,8 @@ import org.springframework.context.annotation.Configuration;
 public class XmemcachedAutoConfiguration {
 
 	@Bean
-	public XmemcachedOperationTemplate xmemcachedOperationTemplate(XmemcachedProperties properties) {
-		return new XmemcachedOperationTemplate(properties);
+	public XmemcachedOperationTemplate xmemcachedOperationTemplate(XMemcachedClient memcachedClient) {
+		return new XmemcachedOperationTemplate(memcachedClient);
 	}
 
 }
