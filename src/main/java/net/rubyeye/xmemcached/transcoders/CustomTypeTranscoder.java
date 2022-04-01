@@ -27,16 +27,7 @@ public class CustomTypeTranscoder<T> extends BaseSerializingTranscoder implement
 
     @Override
     public T decode(CachedData d) {
-        byte[] data = d.getData();
-        if ((d.getFlag() & SerializingTranscoder.COMPRESSED) != 0) {
-            data = decompress(d.getData());
-        }
-        int flag = d.getFlag();
-        if (flag == 0) {
-            return Boolean.valueOf(decodeString(data));
-        } else {
-            return null;
-        }
+        return null;
     }
 
     @Override
