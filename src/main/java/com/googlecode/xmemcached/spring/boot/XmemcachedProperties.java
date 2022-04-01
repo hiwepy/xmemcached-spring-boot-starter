@@ -1,11 +1,18 @@
 package com.googlecode.xmemcached.spring.boot;
 
+import com.google.code.yanf4j.config.Configuration;
+import com.google.code.yanf4j.core.impl.StandardSocketOption;
+import com.google.code.yanf4j.util.SystemUtils;
 import lombok.Data;
 import net.rubyeye.xmemcached.MemcachedClient;
+import net.rubyeye.xmemcached.auth.AuthInfo;
 import org.springframework.boot.autoconfigure.data.redis.RedisProperties;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
+import java.net.InetSocketAddress;
 import java.time.Duration;
+import java.util.HashMap;
+import java.util.Map;
 
 @ConfigurationProperties(prefix = XmemcachedProperties.PREFIX)
 @Data
@@ -17,25 +24,16 @@ public class XmemcachedProperties {
     public static final String PREFIX = "spring.xmemcached";
 
 	/**
-	 * Connection URL. Overrides host, port, and password. User is ignored. Example:
-	 * memcached://user:password@example.com:6379
+	 * Memcached server addresses.   Example: 127.0.0.1:11211
 	 */
-	private String url;
+	private String addresses;
 
-	/**
-	 * Memcached server host.
-	 */
-	private String host = "localhost";
+	private String weights;
 
 	/**
 	 * Login password of the memcached server.
 	 */
 	private String password;
-
-	/**
-	 * Memcached server port.
-	 */
-	private int port = 6379;
 
 	/**
 	 * Whether to enable SSL support.
@@ -45,11 +43,26 @@ public class XmemcachedProperties {
 	/**
 	 * Connection timeout.
 	 */
-	private Duration timeout = Duration.ofMillis(MemcachedClient.DEFAULT_CONNECT_TIMEOUT);
+	private Duration connectTimeout = Duration.ofMillis(MemcachedClient.DEFAULT_CONNECT_TIMEOUT);
+	/**
+	 * 连接池大小，即客户端个数
+	 * In a high concurrent enviroment,you may want to pool memcached clients.
+	 * But a xmemcached client has to start a reactor thread and some thread pools,
+	 * if you create too many clients,the cost is very large.
+	 * Xmemcached supports connection pool instreadof client pool.
+	 * you can create more connections to one or more memcached servers,
+	 * and these connections share the same reactor and thread pools,
+	 * it will reduce the cost of system.
+	 *  默认的pool size是1。设置这一数值不一定能提高性能，请依据你的项目的测试结果为准。初步的测试表明只有在大并发下才有提升。
+	 *  设置连接池的一个不良后果就是，同一个memcached的连接之间的数据更新并非同步的因此你的应用需要自己保证数据更新的原子性（采用CAS或者数据之间毫无关联）。
+	 */
+	private int connectionPoolSize = MemcachedClient.DEFAULT_CONNECTION_POOL_SIZE;
 
 	private boolean failureMode;
 
 	private boolean sanitizeKeys;
+
+	private Map<InetSocketAddress, AuthInfo> authInfoMap = new HashMap<InetSocketAddress, AuthInfo>();
 
 	/**
 	 * Operation timeout, if the operation is not returned in 5 second,throw TimeoutException..
@@ -65,88 +78,83 @@ public class XmemcachedProperties {
 
 	private boolean resolveInetAddresses = true;
 
+	private Networking networking;
+
+	private SocketOptions socketOptions;
 
 	/**
-	 * Lettuce pool configuration.
+	 * Networking properties.
 	 */
-	private Pool pool;
+	@Data
+	public static class Networking {
+
+		/**
+		 * Read buffer size per connection
+		 */
+		private int sessionReadBufferSize = MemcachedClient.DEFAULT_SESSION_READ_BUFF_SIZE;
+
+		private long sessionIdleTimeout = MemcachedClient.DEFAULT_SESSION_IDLE_TIMEOUT;
+
+		/**
+		 * Socket SO_TIMEOUT option
+		 */
+		private int soTimeout = 0;
+
+		/**
+		 * Thread count for processing WRITABLE event
+		 */
+		private int writeThreadCount = 0;
+
+		/**
+		 * Whether to enable statistics
+		 */
+		private boolean statisticsServer = false;
+
+		protected long statisticsInterval = 5 * 60 * 1000L;
+
+		/**
+		 * Whether to handle read write concurrently,default is true
+		 */
+		private boolean handleReadWriteConcurrently = true;
+
+		/**
+		 * Thread coount for processing message dispatching
+		 */
+		private int dispatchMessageThreadCount = 0;
+
+		/**
+		 * THread count for processing READABLE event
+		 */
+		private int readThreadCount = 1;
+
+		private int selectorPoolSize = System.getProperty(Configuration.XMEMCACHED_SELECTOR_POOL_SIZE) == null ? SystemUtils.getSystemThreadCount() : Integer.parseInt(System.getProperty(Configuration.XMEMCACHED_SELECTOR_POOL_SIZE));
+
+		/**
+		 * check session idle interval
+		 */
+		private long checkSessionTimeoutInterval = 1000L;
+	}
+
 
 	/**
-	 * Pool properties.
+	 * Socket properties.
 	 */
-	public static class Pool {
+	@Data
+	public static class SocketOptions {
 
-		/**
-		 * Maximum number of "idle" connections in the pool. Use a negative value to
-		 * indicate an unlimited number of idle connections.
-		 */
-		private int maxIdle = 8;
+		private boolean tcpNodelay = MemcachedClient.DEFAULT_TCP_NO_DELAY;
 
-		/**
-		 * Target for the minimum number of idle connections to maintain in the pool. This
-		 * setting only has an effect if both it and time between eviction runs are
-		 * positive.
-		 */
-		private int minIdle = 0;
+		private int soRcvbuf = MemcachedClient.DEFAULT_TCP_RECV_BUFF_SIZE;
 
-		/**
-		 * Maximum number of connections that can be allocated by the pool at a given
-		 * time. Use a negative value for no limit.
-		 */
-		private int maxActive = 8;
+		private boolean soKeepalive = MemcachedClient.DEFAULT_TCP_KEEPLIVE;
 
-		/**
-		 * Maximum amount of time a connection allocation should block before throwing an
-		 * exception when the pool is exhausted. Use a negative value to block
-		 * indefinitely.
-		 */
-		private Duration maxWait = Duration.ofMillis(-1);
+		private int soSndbuf = MemcachedClient.DEFAULT_TCP_SEND_BUFF_SIZE;
 
-		/**
-		 * Time between runs of the idle object evictor thread. When positive, the idle
-		 * object evictor thread starts, otherwise no idle object eviction is performed.
-		 */
-		private Duration timeBetweenEvictionRuns;
+		private int soLinger = 0;
 
-		public int getMaxIdle() {
-			return this.maxIdle;
-		}
-
-		public void setMaxIdle(int maxIdle) {
-			this.maxIdle = maxIdle;
-		}
-
-		public int getMinIdle() {
-			return this.minIdle;
-		}
-
-		public void setMinIdle(int minIdle) {
-			this.minIdle = minIdle;
-		}
-
-		public int getMaxActive() {
-			return this.maxActive;
-		}
-
-		public void setMaxActive(int maxActive) {
-			this.maxActive = maxActive;
-		}
-
-		public Duration getMaxWait() {
-			return this.maxWait;
-		}
-
-		public void setMaxWait(Duration maxWait) {
-			this.maxWait = maxWait;
-		}
-
-		public Duration getTimeBetweenEvictionRuns() {
-			return this.timeBetweenEvictionRuns;
-		}
-
-		public void setTimeBetweenEvictionRuns(Duration timeBetweenEvictionRuns) {
-			this.timeBetweenEvictionRuns = timeBetweenEvictionRuns;
-		}
+		private boolean soReuseaddr = true;
 
 	}
+
+
 }

@@ -1,38 +1,31 @@
 package com.googlecode.xmemcached.spring.boot;
 
+import com.google.code.yanf4j.config.Configuration;
 import com.google.code.yanf4j.core.SocketOption;
 import com.google.code.yanf4j.core.impl.StandardSocketOption;
+import lombok.extern.slf4j.Slf4j;
 import net.rubyeye.xmemcached.*;
 import net.rubyeye.xmemcached.command.BinaryCommandFactory;
-import net.rubyeye.xmemcached.impl.DefaultKeyProvider;
+import net.rubyeye.xmemcached.impl.AddressMemcachedSessionComparator;
 import net.rubyeye.xmemcached.impl.IndexMemcachedSessionComparator;
 import net.rubyeye.xmemcached.impl.KetamaMemcachedSessionLocator;
 import net.rubyeye.xmemcached.utils.AddrUtil;
-import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+import org.junit.Before;
+import org.junit.Test;
 import org.springframework.util.StringUtils;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import java.util.stream.Stream;
 
-@Configuration
-@ConditionalOnClass({ XMemcachedClient.class })
-@EnableConfigurationProperties({ XmemcachedProperties.class})
-public class XmemcachedAutoConfiguration {
+@Slf4j
+public class Xmemcached_Tests {
 
-	@Bean(destroyMethod = "shutdown")
-	public XMemcachedClient xMemcachedClient(
-			ObjectProvider<KeyProvider> keyProvider,
-			ObjectProvider<CommandFactory> commandFactoryProvider,
-			ObjectProvider<MemcachedSessionComparator> sessionComparatorProvider,
-			ObjectProvider<MemcachedSessionLocator> sessionLocatorProvider,
-			XmemcachedProperties xMemcachedProperties) throws IOException {
+	private XmemcachedOperationTemplate memcachedOperation;
 
+	public XMemcachedClient xMemcachedClient(XmemcachedProperties xMemcachedProperties) throws IOException {
 		XMemcachedClientBuilder builder;
 		Objects.requireNonNull(xMemcachedProperties.getAddresses());
 		if(StringUtils.hasText(xMemcachedProperties.getWeights())){
@@ -46,22 +39,21 @@ public class XmemcachedAutoConfiguration {
 		// 宕机报警
 		builder.setFailureMode(xMemcachedProperties.isFailureMode());
 		// 使用二进制文件
-		builder.setCommandFactory(commandFactoryProvider.getIfAvailable(() -> new BinaryCommandFactory()));
+		builder.setCommandFactory(new BinaryCommandFactory());
 		builder.setConnectionPoolSize(xMemcachedProperties.getConnectionPoolSize());
 		builder.setConnectTimeout(xMemcachedProperties.getConnectTimeout().toMillis());
 		builder.setEnableHealSession(xMemcachedProperties.isEnableHealSession());
 		builder.setHealSessionInterval(xMemcachedProperties.getHealSessionInterval());
-		builder.setKeyProvider(keyProvider.getIfAvailable(() -> DefaultKeyProvider.INSTANCE));
 		builder.setMaxQueuedNoReplyOperations(xMemcachedProperties.getMaxQueuedNoReplyOperations());
 		builder.setOpTimeout(xMemcachedProperties.getOpTimeout().toMillis());
 		builder.setResolveInetAddresses(xMemcachedProperties.isResolveInetAddresses());
-		builder.setSessionComparator(sessionComparatorProvider.getIfAvailable(() -> new IndexMemcachedSessionComparator()));
-		builder.setSessionLocator(sessionLocatorProvider.getIfAvailable(() -> new KetamaMemcachedSessionLocator()));
+		builder.setSessionLocator(new KetamaMemcachedSessionLocator());
 		builder.setSanitizeKeys(xMemcachedProperties.isSanitizeKeys());
+		builder.setSessionComparator(new IndexMemcachedSessionComparator());
 
 		XmemcachedProperties.Networking networking = xMemcachedProperties.getNetworking();
 		if(Objects.nonNull(networking)){
-			final com.google.code.yanf4j.config.Configuration configuration = new com.google.code.yanf4j.config.Configuration();
+			final Configuration configuration = new Configuration();
 			configuration.setCheckSessionTimeoutInterval(networking.getCheckSessionTimeoutInterval());
 			configuration.setDispatchMessageThreadCount(networking.getDispatchMessageThreadCount());
 			configuration.setHandleReadWriteConcurrently(networking.isHandleReadWriteConcurrently());
@@ -87,9 +79,30 @@ public class XmemcachedAutoConfiguration {
 		return (XMemcachedClient) builder.build();
 	}
 
-	@Bean
-	public XmemcachedOperationTemplate xmemcachedOperationTemplate(XMemcachedClient xMemcachedClient, XmemcachedProperties xMemcachedProperties) {
-		return new XmemcachedOperationTemplate(xMemcachedClient, xMemcachedProperties);
+	@Before
+	public void start()  throws IOException{
+		XmemcachedProperties xMemcachedProperties = new XmemcachedProperties();
+		xMemcachedProperties.setAddresses("101.35.55.147:11211");
+		XMemcachedClient xMemcachedClient = this.xMemcachedClient(xMemcachedProperties);
+		memcachedOperation = new XmemcachedOperationTemplate(xMemcachedClient, xMemcachedProperties);
+	}
+
+    @Test
+    public void testCounter() throws Exception {
+		Counter counter = memcachedOperation.counter("test");
+		log.info("counter++ : {}", counter.incrementAndGet());
+    }
+
+	@Test
+	public void testIncr() throws Exception {
+		long counter = memcachedOperation.incr("test2", 12);
+		log.info("counter incr : {}", counter);
+	}
+
+	@Test
+	public void testDecr() throws Exception {
+		long counter = memcachedOperation.decr("test2", 10);
+		log.info("counter decr : {}", counter);
 	}
 
 }
