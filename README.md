@@ -8,9 +8,11 @@ Memcached 是一个高性能的分布式内存对象缓存系统
 
 > 基于 Xmemcached 2.x 的 Spring Boot Starter 实现
 
-http://memcached.org/
-https://www.runoob.com/Memcached/Memcached-tutorial.html
-http://www.javashuo.com/article/p-kliwumfk-kb.html
+官方网站：http://memcached.org/
+
+学习教程：https://www.runoob.com/Memcached/Memcached-tutorial.html
+
+网络资料：http://www.javashuo.com/article/p-kliwumfk-kb.html
 
 ### 使用说明
 
