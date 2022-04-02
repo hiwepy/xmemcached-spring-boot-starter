@@ -1,12 +1,10 @@
 package com.googlecode.xmemcached.spring.boot;
 
 import com.google.code.yanf4j.config.Configuration;
-import com.google.code.yanf4j.core.SocketOption;
 import com.google.code.yanf4j.core.impl.StandardSocketOption;
 import lombok.extern.slf4j.Slf4j;
 import net.rubyeye.xmemcached.*;
 import net.rubyeye.xmemcached.command.BinaryCommandFactory;
-import net.rubyeye.xmemcached.impl.AddressMemcachedSessionComparator;
 import net.rubyeye.xmemcached.impl.IndexMemcachedSessionComparator;
 import net.rubyeye.xmemcached.impl.KetamaMemcachedSessionLocator;
 import net.rubyeye.xmemcached.utils.AddrUtil;
@@ -15,8 +13,6 @@ import org.junit.Test;
 import org.springframework.util.StringUtils;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Objects;
 import java.util.stream.Stream;
 
@@ -89,20 +85,34 @@ public class Xmemcached_Tests {
 
     @Test
     public void testCounter() throws Exception {
-		Counter counter = memcachedOperation.counter("test");
+		Counter counter = memcachedOperation.counter("counter");
 		log.info("counter++ : {}", counter.incrementAndGet());
+		log.info("counter-- : {}", counter.decrementAndGet());
+		log.info("counter+5 : {}", counter.addAndGet(5));
+		log.info("counter-1 : {}", counter.addAndGet(-1));
     }
 
 	@Test
 	public void testIncr() throws Exception {
-		long counter = memcachedOperation.incr("test2", 12);
+		long counter = memcachedOperation.incr("testIncr", 12);
 		log.info("counter incr : {}", counter);
 	}
 
 	@Test
 	public void testDecr() throws Exception {
-		long counter = memcachedOperation.decr("test2", 10);
+		long counter = memcachedOperation.decr("testDecr", 10);
 		log.info("counter decr : {}", counter);
 	}
 
+	@Test
+	public void testSetIfAbsent() throws Exception {
+		boolean setIfAbsent = memcachedOperation.setIfAbsent("testSetIfAbsent", 10);
+		log.info("setIfAbsent : {}", setIfAbsent);
+	}
+
+	@Test
+	public void testCas() throws Exception {
+		boolean cas = memcachedOperation.cas("testCas", 10);
+		log.info("cas : {}", cas);
+	}
 }

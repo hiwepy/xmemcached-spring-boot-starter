@@ -124,6 +124,30 @@ public class XmemcachedOperationTemplate {
         }
     }
 
+    public <T> boolean cas(String key, T value) {
+        return this.cas(key, value, 0);
+    }
+
+    public <T> boolean cas(String key, T value, int seconds) {
+        try {
+            GetsResponse<Object> result = xMemcachedClient.gets(key);
+            if(Objects.isNull(result)){
+                return xMemcachedClient.add(key, seconds, value);
+            }
+            return xMemcachedClient.cas(key, seconds, value, result.getCas());
+        } catch (Exception e) {
+            log.error(e.getMessage());
+            throw new XMemcachedOperationException(e.getMessage());
+        }
+    }
+
+    public <T> boolean cas(String key, T value, Duration timeout) {
+        if (Objects.isNull(timeout) || timeout.isNegative()) {
+            return false;
+        }
+        return this.cas(key, value, Long.valueOf(timeout.getSeconds()).intValue());
+    }
+
     public <T> boolean cas(String key, T value, int seconds, long cas) {
         try {
             return xMemcachedClient.cas(key, seconds, value, cas);
@@ -149,7 +173,7 @@ public class XmemcachedOperationTemplate {
      * @param value 值
      * @return true成功 false失败
      */
-    public boolean set(String key, Object value) {
+    public <T> boolean set(String key, T value) {
         try {
             return xMemcachedClient.set(key, 0, value);
         } catch (Exception e) {
@@ -166,7 +190,7 @@ public class XmemcachedOperationTemplate {
      * @param seconds 过期时间(秒) time要&gt;=0 如果time等于0，表示永久存储（默认是一个月)
      * @return true成功 false 失败
      */
-    public boolean set(String key, Object value, int seconds) {
+    public <T> boolean set(String key, T value, int seconds) {
         try {
             if (seconds > 0) {
                 return xMemcachedClient.set(key, seconds, value);
@@ -187,26 +211,11 @@ public class XmemcachedOperationTemplate {
      * @param timeout 时间
      * @return true成功 false 失败
      */
-    public boolean set(String key, Object value, Duration timeout) {
+    public <T> boolean set(String key, T value, Duration timeout) {
         if (Objects.isNull(timeout) || timeout.isNegative()) {
             return false;
         }
-        try {
-            return xMemcachedClient.set(key, Long.valueOf(timeout.getSeconds()).intValue(), value);
-        } catch (Exception e) {
-            log.error(e.getMessage());
-            throw new XMemcachedOperationException(e.getMessage());
-        }
-    }
-
-    public boolean setNx(String key, Object value) {
-        try {
-            GetsResponse<Object> result = xMemcachedClient.gets(key);
-            return xMemcachedClient.cas(key, 0, value, result.getCas());
-        } catch (Exception e) {
-            log.error(e.getMessage());
-            throw new XMemcachedOperationException(e.getMessage());
-        }
+        return set(key, value, Long.valueOf(timeout.getSeconds()).intValue());
     }
 
     /**
@@ -215,7 +224,7 @@ public class XmemcachedOperationTemplate {
      * @param key 键
      * @return 值
      */
-    public Object get(String key) {
+    public <T> T get(String key) {
         try {
             return xMemcachedClient.get(key);
         } catch (Exception e) {
@@ -323,7 +332,7 @@ public class XmemcachedOperationTemplate {
      * @param keys 键集合
      * @return 值
      */
-    public Map<String, Object> mGet(Collection<String> keys) {
+    public <T> Map<String, T> mGet(Collection<String> keys) {
         try {
             if(CollectionUtils.isEmpty(keys)) {
                 return Collections.emptyMap();
@@ -335,7 +344,7 @@ public class XmemcachedOperationTemplate {
         }
     }
 
-    public Map<String, Object> mGet(Collection<Object> keys, String redisPrefix) {
+    public <T> Map<String, T> mGet(Collection<Object> keys, String redisPrefix) {
         try {
             if(CollectionUtils.isEmpty(keys)) {
                 return Collections.emptyMap();
