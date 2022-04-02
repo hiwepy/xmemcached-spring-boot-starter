@@ -12,10 +12,14 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;
 
 import java.io.IOException;
+import java.net.InetSocketAddress;
 import java.util.Objects;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 @Configuration
@@ -26,6 +30,7 @@ public class XmemcachedAutoConfiguration {
 	@Bean(destroyMethod = "shutdown")
 	public XMemcachedClient xMemcachedClient(
 			ObjectProvider<KeyProvider> keyProvider,
+			ObjectProvider<AuthInfoProvider> authInfoProvider,
 			ObjectProvider<CommandFactory> commandFactoryProvider,
 			ObjectProvider<MemcachedSessionComparator> sessionComparatorProvider,
 			ObjectProvider<MemcachedSessionLocator> sessionLocatorProvider,
@@ -40,7 +45,7 @@ public class XmemcachedAutoConfiguration {
 			builder = new XMemcachedClientBuilder(AddrUtil.getAddresses(xMemcachedProperties.getAddresses()));
 		}
 
-		builder.setAuthInfoMap(xMemcachedProperties.getAuthInfoMap());
+		builder.setAuthInfoMap(authInfoProvider.getIfAvailable(() -> new AuthInfoProvider(){}).getAuthInfoMap());
 		// 宕机报警
 		builder.setFailureMode(xMemcachedProperties.isFailureMode());
 		// 使用二进制文件

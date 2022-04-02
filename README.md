@@ -32,64 +32,64 @@ Memcached 是一个高性能的分布式内存对象缓存系统
 ################################################################################################################
 ###xmemcached基本配置：
 ################################################################################################################
-xmemcached:
-  connect-timeout: 10s
-  read-timeout: 30s
-  write-timeout: 20s
-  pool:
-    # 最大空闲连接梳数量，超出该值后，连接用完后会被关闭，最多只会保留idleConnectionCount个连接数量
-    max-idle-connections: 256
-    # 最大瞬时处理连接数量
-    max-requests: 128
-    # 每个请求地址最大瞬时处理连接数量
-    max-requests-per-host: 24
+spring:
+  memcached:
+    addresses: 101.35.55.147:11211
+    weights: 100
+    connection-pool-size: 8
+    connect-timeout: 60s
+    failure-mode: true
+    sanitize-keys: false
+    op-timeout: 5s
+    enable-heal-session: true
+    heal-session-interval: 2000
+    resolve-inet-addresses: true
 ```
 
 ##### 3、使用示例
 
 ```java
 
-import java.io.IOException;
-
-import javax.annotation.PostConstruct;
-
+import lombok.extern.slf4j.Slf4j;
+import net.rubyeye.xmemcached.Counter;
+import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
+@RunWith(SpringRunner.class)
+@SpringBootTest(classes = XmemcachedApplicationTests.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @SpringBootApplication
-public class Application {
-	
-	@Autowired
-	private OkHttpClient okHttpClient;
-	
-	@PostConstruct
-	public void test() throws IOException {
-		
-		//调用ok的get请求
-       	Request request = new Request.Builder()
-                .get()
-                .url(url)
-                .build();
-       	//同步请求方式
-	   	Response theResponse = okHttpClient.newCall(newRequest).execute();
-	   	// 解析响应内容
-	   	ResponseBody body = theResponse.body();
-	   	// 响应头信息
-	   	Headers headers = theResponse.headers();
-	   	// 响应类型
-	   	MediaType mediaType = body.contentType();
-	   	// 成功状态
-		if( theResponse.isSuccessful()) {
-			// do something
-		} 
-		
-	}
-	
-	
-	public static void main(String[] args) throws Exception {
-		SpringApplication.run(Application.class, args);
-	}
+@Slf4j
+public class XmemcachedApplicationTests {
+
+    @Autowired
+    private XmemcachedOperationTemplate memcachedOperation;
+
+    @Test
+    public void testCounter() throws Exception {
+        Counter counter = memcachedOperation.counter("test");
+        log.info("counter++ : {}", counter.incrementAndGet());
+    }
+
+    @Test
+    public void testIncr() throws Exception {
+        long counter = memcachedOperation.incr("test2", 12);
+        log.info("counter incr : {}", counter);
+    }
+
+    @Test
+    public void testDecr() throws Exception {
+        long counter = memcachedOperation.decr("test2", 10);
+        log.info("counter decr : {}", counter);
+    }
+
+    public static void main(String[] args) {
+        SpringApplication.run(XmemcachedApplicationTests.class, args);
+    }
 
 }
 ```

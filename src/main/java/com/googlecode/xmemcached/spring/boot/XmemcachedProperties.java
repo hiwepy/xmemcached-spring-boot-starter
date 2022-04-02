@@ -21,7 +21,7 @@ public class XmemcachedProperties {
 	/**
      * The prefix of the property of {@link XmemcachedProperties}.
      */
-    public static final String PREFIX = "spring.xmemcached";
+    public static final String PREFIX = "spring.memcached";
 
 	/**
 	 * Memcached server addresses.   Example: 127.0.0.1:11211
@@ -29,16 +29,6 @@ public class XmemcachedProperties {
 	private String addresses;
 
 	private String weights;
-
-	/**
-	 * Login password of the memcached server.
-	 */
-	private String password;
-
-	/**
-	 * Whether to enable SSL support.
-	 */
-	private boolean ssl;
 
 	/**
 	 * Connection timeout.
@@ -62,13 +52,10 @@ public class XmemcachedProperties {
 
 	private boolean sanitizeKeys;
 
-	private Map<InetSocketAddress, AuthInfo> authInfoMap = new HashMap<InetSocketAddress, AuthInfo>();
-
 	/**
 	 * Operation timeout, if the operation is not returned in 5 second,throw TimeoutException..
 	 */
 	private Duration opTimeout = Duration.ofMillis(MemcachedClient.DEFAULT_OP_TIMEOUT);
-
 
 	private int maxQueuedNoReplyOperations = MemcachedClient.DEFAULT_MAX_QUEUED_NOPS;
 

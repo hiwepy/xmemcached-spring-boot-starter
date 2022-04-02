@@ -1,3 +1,13 @@
 spring:
-  xmemcached:
+  memcached:
     addresses: 101.35.55.147:11211
+    weights: 100
+    connection-pool-size: 8
+    connect-timeout: 60s
+    failure-mode: true
+    sanitize-keys: false
+    op-timeout: 5s
+    enable-heal-session: true
+    heal-session-interval: 2000
+    resolve-inet-addresses: true
+    net
