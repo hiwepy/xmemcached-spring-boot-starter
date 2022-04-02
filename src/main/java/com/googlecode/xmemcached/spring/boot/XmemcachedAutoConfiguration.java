@@ -1,6 +1,5 @@
 package com.googlecode.xmemcached.spring.boot;
 
-import com.google.code.yanf4j.core.SocketOption;
 import com.google.code.yanf4j.core.impl.StandardSocketOption;
 import net.rubyeye.xmemcached.*;
 import net.rubyeye.xmemcached.command.BinaryCommandFactory;
@@ -16,7 +15,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.util.StringUtils;
 
 import java.io.IOException;
-import java.util.Map;
 import java.util.Objects;
 import java.util.stream.Stream;
 
