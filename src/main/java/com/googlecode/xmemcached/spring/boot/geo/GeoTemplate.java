@@ -14,6 +14,8 @@ import java.util.stream.Collectors;
 @Slf4j
 public class GeoTemplate {
 
+
+
 	/**
 	 * 计算两点之间距离 https://www.cnblogs.com/zhaoyanhaoBlog/p/10121499.html
 	 * @param longitude1	：坐标1经度

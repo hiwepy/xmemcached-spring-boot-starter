@@ -1,6 +1,5 @@
 package com.googlecode.xmemcached.spring.boot;
 
-import com.google.common.collect.Maps;
 import lombok.extern.slf4j.Slf4j;
 import net.rubyeye.xmemcached.CASOperation;
 import net.rubyeye.xmemcached.Counter;
