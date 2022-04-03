@@ -31,7 +31,6 @@ public class Xmemcached_Tests {
 			builder = new XMemcachedClientBuilder(AddrUtil.getAddresses(xMemcachedProperties.getAddresses()));
 		}
 
-		builder.setAuthInfoMap(xMemcachedProperties.getAuthInfoMap());
 		// 宕机报警
 		builder.setFailureMode(xMemcachedProperties.isFailureMode());
 		// 使用二进制文件
