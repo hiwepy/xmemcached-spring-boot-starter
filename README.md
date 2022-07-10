@@ -22,7 +22,7 @@ Memcached 是一个高性能的分布式内存对象缓存系统
 <dependency>
 	<groupId>com.github.hiwepy</groupId>
 	<artifactId>xmemcached-spring-boot-starter</artifactId>
-	<version>${project.version}</version>
+	<version>2.0.0.RELEASE</version>
 </dependency>
 ```
 
