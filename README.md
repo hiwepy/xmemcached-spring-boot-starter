@@ -4,7 +4,7 @@ Spring Boot Starter For Memcached 2.x
 
 ### 组件简介
 
-Memcached 是一个高性能的分布式内存对象缓存系统
+Memcached 是一个费开源、高性能、分布式内存对象缓存系统，本质上是通用的，但旨在通过减轻数据库负载来加快动态web应用程序的速度。
 
 > 基于 Xmemcached 2.x 的 Spring Boot Starter 实现
 
