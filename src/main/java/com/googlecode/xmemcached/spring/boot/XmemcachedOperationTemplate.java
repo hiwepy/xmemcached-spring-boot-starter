@@ -425,6 +425,7 @@ public class XmemcachedOperationTemplate {
         }
     }
 
+
     /**
      * 递减
      *
@@ -505,6 +506,24 @@ public class XmemcachedOperationTemplate {
                     xMemcachedClient.delete(key);
                 }
             }
+        } catch (Exception e) {
+            log.error(e.getMessage());
+            throw new XMemcachedOperationException(e.getMessage());
+        }
+    }
+
+    public Boolean touch(String key, int seconds) {
+        try {
+            return xMemcachedClient.touch(key, seconds, optTimeout);
+        } catch (Exception e) {
+            log.error(e.getMessage());
+            throw new XMemcachedOperationException(e.getMessage());
+        }
+    }
+
+    public Boolean touch(String key, Duration timeout) {
+        try {
+            return xMemcachedClient.touch(key, Long.valueOf(timeout.getSeconds()).intValue(), optTimeout);
         } catch (Exception e) {
             log.error(e.getMessage());
             throw new XMemcachedOperationException(e.getMessage());
