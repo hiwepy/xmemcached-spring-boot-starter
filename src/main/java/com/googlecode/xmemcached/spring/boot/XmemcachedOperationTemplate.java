@@ -5,15 +5,17 @@ import net.rubyeye.xmemcached.CASOperation;
 import net.rubyeye.xmemcached.Counter;
 import net.rubyeye.xmemcached.GetsResponse;
 import net.rubyeye.xmemcached.XMemcachedClient;
-import net.rubyeye.xmemcached.transcoders.*;
+import net.rubyeye.xmemcached.transcoders.Transcoder;
 import org.springframework.util.CollectionUtils;
 
 import java.math.BigDecimal;
 import java.time.Duration;
-import java.util.*;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Map;
+import java.util.Objects;
 import java.util.function.Function;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 @Slf4j
 public class XmemcachedOperationTemplate {

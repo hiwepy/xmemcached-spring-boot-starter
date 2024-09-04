@@ -1,18 +1,12 @@
 package com.googlecode.xmemcached.spring.boot;
 
 import com.google.code.yanf4j.config.Configuration;
-import com.google.code.yanf4j.core.impl.StandardSocketOption;
 import com.google.code.yanf4j.util.SystemUtils;
 import lombok.Data;
 import net.rubyeye.xmemcached.MemcachedClient;
-import net.rubyeye.xmemcached.auth.AuthInfo;
-import org.springframework.boot.autoconfigure.data.redis.RedisProperties;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-import java.net.InetSocketAddress;
 import java.time.Duration;
-import java.util.HashMap;
-import java.util.Map;
 
 @ConfigurationProperties(prefix = XmemcachedProperties.PREFIX)
 @Data
