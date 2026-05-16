@@ -1,0 +1,927 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------< [0;36mio.github.hiwepy:xmemcached-spring-boot-starter[0;1m >----------[m
+[[1;34mINFO[m] [1mBuilding io.github.hiwepy:xmemcached-spring-boot-starter 2.3.x.20240823.RELEASE[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.1.0:clean[m [1m(default-clean)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Deleting /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.0.0-M3:enforce[m [1m(default-cli)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:resources[m [1m(default-resources)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 0 resource
+[[1;34mINFO[m] Copying 2 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:compile[m [1m(default-compile)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 10 source files to /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/target/classes
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  0.680 s
+[[1;34mINFO[m] Finished at: 2026-03-16T14:21:27+08:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;31mERROR[m] Failed to execute goal [32morg.apache.maven.plugins:maven-compiler-plugin:3.8.1:compile[m [1m(default-compile)[m on project [36mxmemcached-spring-boot-starter[m: [1;31mFatal error compiling[m: java.lang.IllegalAccessError: class lombok.javac.apt.LombokProcessor (in unnamed module @0x8641b7d) cannot access class com.sun.tools.javac.processing.JavacProcessingEnvironment (in module jdk.compiler) because module jdk.compiler does not export com.sun.tools.javac.processing to unnamed module @0x8641b7d -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+[xmemcached-spring-boot-starter/2.3.x] 失败 - 查看日志
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------< [0;36mio.github.hiwepy:xmemcached-spring-boot-starter[0;1m >----------[m
+[[1;34mINFO[m] [1mBuilding io.github.hiwepy:xmemcached-spring-boot-starter 2.7.x.20240823.RELEASE[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.2.0:clean[m [1m(default-clean)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Deleting /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.0.0:enforce[m [1m(default-cli)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:resources[m [1m(default-resources)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 0 resource
+[[1;34mINFO[m] Copying 2 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:compile[m [1m(default-compile)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 10 source files to /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/target/classes
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  0.708 s
+[[1;34mINFO[m] Finished at: 2026-03-16T14:21:28+08:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;31mERROR[m] Failed to execute goal [32morg.apache.maven.plugins:maven-compiler-plugin:3.10.1:compile[m [1m(default-compile)[m on project [36mxmemcached-spring-boot-starter[m: [1;31mFatal error compiling[m: java.lang.NoSuchFieldError: Class com.sun.tools.javac.tree.JCTree$JCImport does not have member field 'com.sun.tools.javac.tree.JCTree qualid' -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+[xmemcached-spring-boot-starter/2.7.x] 失败 - 查看日志
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------< [0;36mio.github.hiwepy:xmemcached-spring-boot-starter[0;1m >----------[m
+[[1;34mINFO[m] [1mBuilding io.github.hiwepy:xmemcached-spring-boot-starter 3.0.x.20251227-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.4.0:clean[m [1m(default-clean)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Deleting /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.5.0:enforce[m [1m(default-cli)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[[1;34mINFO[m] Rule 1: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:resources[m [1m(default-resources)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Copying 0 resource from src/main/resources to target/classes
+[[1;34mINFO[m] Copying 3 resources from src/main/resources to target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.13.0:compile[m [1m(default-compile)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Recompiling the module because of [1mchanged source code[m.
+[[1;34mINFO[m] Compiling 10 source files with javac [debug parameters target 17] to target/classes
+[[1;33mWARNING[m] 未与 -source 17 一起设置系统模块路径
+[[1;34mINFO[m] 由于在类路径中发现了一个或多个处理程序，因此启用了
+  批注处理。未来发行版的 javac 可能会禁用批注处理，
+  除非至少按名称指定了一个处理程序 (-processor)，
+  或指定了搜索路径 (--processor-path, --processor-module-path)，
+  或显式启用了批注处理 (-proc:only, -proc:full)。
+  可使用 -Xlint:-options 隐藏此消息。
+  可使用 -proc:none 禁用批注处理。
+[[1;34mINFO[m] /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/src/main/java/com/googlecode/xmemcached/spring/boot/XmemcachedKey.java: /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/src/main/java/com/googlecode/xmemcached/spring/boot/XmemcachedKey.java使用或覆盖了已过时的 API。
+[[1;34mINFO[m] /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/src/main/java/com/googlecode/xmemcached/spring/boot/XmemcachedKey.java: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+[[1;34mINFO[m] /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/src/main/java/com/googlecode/xmemcached/spring/boot/XmemcachedOperationTemplate.java: /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/src/main/java/com/googlecode/xmemcached/spring/boot/XmemcachedOperationTemplate.java使用了未经检查或不安全的操作。
+[[1;34mINFO[m] /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/src/main/java/com/googlecode/xmemcached/spring/boot/XmemcachedOperationTemplate.java: 有关详细信息, 请使用 -Xlint:unchecked 重新编译。
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:testResources[m [1m(default-testResources)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Not copying test resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.13.0:testCompile[m [1m(default-testCompile)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Not compiling test sources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:3.5.0:test[m [1m(default-test)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Tests are skipped.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-jar-plugin:3.4.2:jar[m [1m(default-jar)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Building jar: /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/target/xmemcached-spring-boot-starter-3.0.x.20251227-SNAPSHOT.jar
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-source-plugin:3.3.1:jar-no-fork[m [1m(attach-sources)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Building jar: /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/target/xmemcached-spring-boot-starter-3.0.x.20251227-SNAPSHOT-sources.jar
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-install-plugin:3.1.3:install[m [1m(default-install)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Installing /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/pom.xml to /Users/wandl/.m2/repository/com/github/hiwepy/xmemcached-spring-boot-starter/3.0.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.0.x.20251227-SNAPSHOT.pom
+[[1;34mINFO[m] Installing /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/target/xmemcached-spring-boot-starter-3.0.x.20251227-SNAPSHOT.jar to /Users/wandl/.m2/repository/com/github/hiwepy/xmemcached-spring-boot-starter/3.0.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.0.x.20251227-SNAPSHOT.jar
+[[1;34mINFO[m] Installing /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/target/xmemcached-spring-boot-starter-3.0.x.20251227-SNAPSHOT-sources.jar to /Users/wandl/.m2/repository/com/github/hiwepy/xmemcached-spring-boot-starter/3.0.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.0.x.20251227-SNAPSHOT-sources.jar
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-deploy-plugin:3.1.3:deploy[m [1m(default-deploy)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Using alternate deployment repository maven-snapshots::default::https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots
+[[1;33mWARNING[m] Using legacy syntax for alternative repository. Use "maven-snapshots::https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots" instead.
+Downloading from maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.0.x.20251227-SNAPSHOT/maven-metadata.xml
+Uploading to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.0.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.0.x.20251227-20260316.062130-1.pom
+Progress (1): 4.1/14 kB
+Progress (1): 8.2/14 kB
+Progress (1): 12/14 kB 
+Progress (1): 14 kB   
+                   
+Uploaded to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.0.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.0.x.20251227-20260316.062130-1.pom (14 kB at 14 kB/s)
+Uploading to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.0.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.0.x.20251227-20260316.062130-1.jar
+Progress (1): 4.1/35 kB
+Progress (1): 8.2/35 kB
+Progress (1): 12/35 kB 
+Progress (1): 16/35 kB
+Progress (1): 20/35 kB
+Progress (1): 25/35 kB
+Progress (1): 29/35 kB
+Progress (1): 33/35 kB
+Progress (1): 35 kB   
+                   
+Uploaded to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.0.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.0.x.20251227-20260316.062130-1.jar (35 kB at 32 kB/s)
+Uploading to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.0.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.0.x.20251227-20260316.062130-1-sources.jar
+Progress (1): 4.1/17 kB
+Progress (1): 8.2/17 kB
+Progress (1): 12/17 kB 
+Progress (1): 16/17 kB
+Progress (1): 17 kB   
+                   
+Uploaded to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.0.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.0.x.20251227-20260316.062130-1-sources.jar (17 kB at 16 kB/s)
+Downloading from maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/maven-metadata.xml
+Uploading to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.0.x.20251227-SNAPSHOT/maven-metadata.xml
+Progress (1): 1.0 kB
+                    
+Uploaded to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.0.x.20251227-SNAPSHOT/maven-metadata.xml (1.0 kB at 955 B/s)
+Uploading to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/maven-metadata.xml
+Progress (1): 316 B
+                   
+Uploaded to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/maven-metadata.xml (316 B at 312 B/s)
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  7.068 s
+[[1;34mINFO[m] Finished at: 2026-03-16T14:21:35+08:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[xmemcached-spring-boot-starter/3.0.x] 成功
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------< [0;36mio.github.hiwepy:xmemcached-spring-boot-starter[0;1m >----------[m
+[[1;34mINFO[m] [1mBuilding io.github.hiwepy:xmemcached-spring-boot-starter 3.1.x.20251227-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.4.0:clean[m [1m(default-clean)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Deleting /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.5.0:enforce[m [1m(default-cli)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[[1;34mINFO[m] Rule 1: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:resources[m [1m(default-resources)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Copying 0 resource from src/main/resources to target/classes
+[[1;34mINFO[m] Copying 3 resources from src/main/resources to target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.13.0:compile[m [1m(default-compile)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Recompiling the module because of [1mchanged source code[m.
+[[1;34mINFO[m] Compiling 10 source files with javac [debug parameters release 17] to target/classes
+[[1;34mINFO[m] 由于在类路径中发现了一个或多个处理程序，因此启用了
+  批注处理。未来发行版的 javac 可能会禁用批注处理，
+  除非至少按名称指定了一个处理程序 (-processor)，
+  或指定了搜索路径 (--processor-path, --processor-module-path)，
+  或显式启用了批注处理 (-proc:only, -proc:full)。
+  可使用 -Xlint:-options 隐藏此消息。
+  可使用 -proc:none 禁用批注处理。
+[[1;34mINFO[m] /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/src/main/java/com/googlecode/xmemcached/spring/boot/XmemcachedOperationTemplate.java: /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/src/main/java/com/googlecode/xmemcached/spring/boot/XmemcachedOperationTemplate.java使用了未经检查或不安全的操作。
+[[1;34mINFO[m] /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/src/main/java/com/googlecode/xmemcached/spring/boot/XmemcachedOperationTemplate.java: 有关详细信息, 请使用 -Xlint:unchecked 重新编译。
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:testResources[m [1m(default-testResources)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Not copying test resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.13.0:testCompile[m [1m(default-testCompile)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Not compiling test sources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:3.5.0:test[m [1m(default-test)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Tests are skipped.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-jar-plugin:3.4.2:jar[m [1m(default-jar)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Building jar: /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/target/xmemcached-spring-boot-starter-3.1.x.20251227-SNAPSHOT.jar
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-source-plugin:3.3.1:jar-no-fork[m [1m(attach-sources)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Building jar: /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/target/xmemcached-spring-boot-starter-3.1.x.20251227-SNAPSHOT-sources.jar
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-install-plugin:3.1.3:install[m [1m(default-install)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Installing /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/pom.xml to /Users/wandl/.m2/repository/com/github/hiwepy/xmemcached-spring-boot-starter/3.1.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.1.x.20251227-SNAPSHOT.pom
+[[1;34mINFO[m] Installing /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/target/xmemcached-spring-boot-starter-3.1.x.20251227-SNAPSHOT.jar to /Users/wandl/.m2/repository/com/github/hiwepy/xmemcached-spring-boot-starter/3.1.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.1.x.20251227-SNAPSHOT.jar
+[[1;34mINFO[m] Installing /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/target/xmemcached-spring-boot-starter-3.1.x.20251227-SNAPSHOT-sources.jar to /Users/wandl/.m2/repository/com/github/hiwepy/xmemcached-spring-boot-starter/3.1.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.1.x.20251227-SNAPSHOT-sources.jar
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-deploy-plugin:3.1.3:deploy[m [1m(default-deploy)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Using alternate deployment repository maven-snapshots::default::https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots
+[[1;33mWARNING[m] Using legacy syntax for alternative repository. Use "maven-snapshots::https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots" instead.
+Downloading from maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.1.x.20251227-SNAPSHOT/maven-metadata.xml
+Uploading to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.1.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.1.x.20251227-20260316.062137-1.pom
+Progress (1): 4.1/14 kB
+Progress (1): 8.2/14 kB
+Progress (1): 12/14 kB 
+Progress (1): 14 kB   
+                   
+Uploaded to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.1.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.1.x.20251227-20260316.062137-1.pom (14 kB at 15 kB/s)
+Uploading to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.1.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.1.x.20251227-20260316.062137-1.jar
+Progress (1): 4.1/35 kB
+Progress (1): 8.2/35 kB
+Progress (1): 12/35 kB 
+Progress (1): 16/35 kB
+Progress (1): 20/35 kB
+Progress (1): 25/35 kB
+Progress (1): 29/35 kB
+Progress (1): 33/35 kB
+Progress (1): 35 kB   
+                   
+Uploaded to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.1.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.1.x.20251227-20260316.062137-1.jar (35 kB at 33 kB/s)
+Uploading to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.1.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.1.x.20251227-20260316.062137-1-sources.jar
+Progress (1): 4.1/17 kB
+Progress (1): 8.2/17 kB
+Progress (1): 12/17 kB 
+Progress (1): 16/17 kB
+Progress (1): 17 kB   
+                   
+Uploaded to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.1.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.1.x.20251227-20260316.062137-1-sources.jar (17 kB at 20 kB/s)
+Downloading from maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/maven-metadata.xml
+Progress (1): 316 B
+                   
+Downloaded from maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/maven-metadata.xml (316 B at 1.4 kB/s)
+Uploading to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.1.x.20251227-SNAPSHOT/maven-metadata.xml
+Progress (1): 1.0 kB
+                    
+Uploaded to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.1.x.20251227-SNAPSHOT/maven-metadata.xml (1.0 kB at 1.1 kB/s)
+Uploading to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/maven-metadata.xml
+Progress (1): 365 B
+                   
+Uploaded to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/maven-metadata.xml (365 B at 348 B/s)
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  6.823 s
+[[1;34mINFO[m] Finished at: 2026-03-16T14:21:42+08:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[xmemcached-spring-boot-starter/3.1.x] 成功
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------< [0;36mio.github.hiwepy:xmemcached-spring-boot-starter[0;1m >----------[m
+[[1;34mINFO[m] [1mBuilding io.github.hiwepy:xmemcached-spring-boot-starter 3.2.x.20251227-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.4.0:clean[m [1m(default-clean)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Deleting /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.5.0:enforce[m [1m(default-cli)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[[1;34mINFO[m] Rule 1: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:resources[m [1m(default-resources)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Copying 0 resource from src/main/resources to target/classes
+[[1;34mINFO[m] Copying 3 resources from src/main/resources to target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.13.0:compile[m [1m(default-compile)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Recompiling the module because of [1mchanged source code[m.
+[[1;34mINFO[m] Compiling 10 source files with javac [debug parameters release 17] to target/classes
+[[1;34mINFO[m] 由于在类路径中发现了一个或多个处理程序，因此启用了
+  批注处理。未来发行版的 javac 可能会禁用批注处理，
+  除非至少按名称指定了一个处理程序 (-processor)，
+  或指定了搜索路径 (--processor-path, --processor-module-path)，
+  或显式启用了批注处理 (-proc:only, -proc:full)。
+  可使用 -Xlint:-options 隐藏此消息。
+  可使用 -proc:none 禁用批注处理。
+[[1;34mINFO[m] /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/src/main/java/com/googlecode/xmemcached/spring/boot/XmemcachedOperationTemplate.java: /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/src/main/java/com/googlecode/xmemcached/spring/boot/XmemcachedOperationTemplate.java使用了未经检查或不安全的操作。
+[[1;34mINFO[m] /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/src/main/java/com/googlecode/xmemcached/spring/boot/XmemcachedOperationTemplate.java: 有关详细信息, 请使用 -Xlint:unchecked 重新编译。
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:testResources[m [1m(default-testResources)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Not copying test resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.13.0:testCompile[m [1m(default-testCompile)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Not compiling test sources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:3.5.0:test[m [1m(default-test)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Tests are skipped.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-jar-plugin:3.4.2:jar[m [1m(default-jar)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Building jar: /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/target/xmemcached-spring-boot-starter-3.2.x.20251227-SNAPSHOT.jar
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-source-plugin:3.3.1:jar-no-fork[m [1m(attach-sources)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Building jar: /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/target/xmemcached-spring-boot-starter-3.2.x.20251227-SNAPSHOT-sources.jar
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-install-plugin:3.1.3:install[m [1m(default-install)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Installing /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/pom.xml to /Users/wandl/.m2/repository/com/github/hiwepy/xmemcached-spring-boot-starter/3.2.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.2.x.20251227-SNAPSHOT.pom
+[[1;34mINFO[m] Installing /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/target/xmemcached-spring-boot-starter-3.2.x.20251227-SNAPSHOT.jar to /Users/wandl/.m2/repository/com/github/hiwepy/xmemcached-spring-boot-starter/3.2.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.2.x.20251227-SNAPSHOT.jar
+[[1;34mINFO[m] Installing /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/target/xmemcached-spring-boot-starter-3.2.x.20251227-SNAPSHOT-sources.jar to /Users/wandl/.m2/repository/com/github/hiwepy/xmemcached-spring-boot-starter/3.2.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.2.x.20251227-SNAPSHOT-sources.jar
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-deploy-plugin:3.1.3:deploy[m [1m(default-deploy)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Using alternate deployment repository maven-snapshots::default::https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots
+[[1;33mWARNING[m] Using legacy syntax for alternative repository. Use "maven-snapshots::https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots" instead.
+Downloading from maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.2.x.20251227-SNAPSHOT/maven-metadata.xml
+Uploading to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.2.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.2.x.20251227-20260316.062145-1.pom
+Progress (1): 4.1/14 kB
+Progress (1): 8.2/14 kB
+Progress (1): 12/14 kB 
+Progress (1): 14 kB   
+                   
+Uploaded to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.2.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.2.x.20251227-20260316.062145-1.pom (14 kB at 14 kB/s)
+Uploading to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.2.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.2.x.20251227-20260316.062145-1.jar
+Progress (1): 4.1/35 kB
+Progress (1): 8.2/35 kB
+Progress (1): 12/35 kB 
+Progress (1): 16/35 kB
+Progress (1): 20/35 kB
+Progress (1): 25/35 kB
+Progress (1): 29/35 kB
+Progress (1): 33/35 kB
+Progress (1): 35 kB   
+                   
+Uploaded to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.2.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.2.x.20251227-20260316.062145-1.jar (35 kB at 29 kB/s)
+Uploading to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.2.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.2.x.20251227-20260316.062145-1-sources.jar
+Progress (1): 4.1/17 kB
+Progress (1): 8.2/17 kB
+Progress (1): 12/17 kB 
+Progress (1): 16/17 kB
+Progress (1): 17 kB   
+                   
+Uploaded to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.2.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.2.x.20251227-20260316.062145-1-sources.jar (17 kB at 17 kB/s)
+Downloading from maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/maven-metadata.xml
+Progress (1): 365 B
+                   
+Downloaded from maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/maven-metadata.xml (365 B at 1.9 kB/s)
+Uploading to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.2.x.20251227-SNAPSHOT/maven-metadata.xml
+Progress (1): 1.0 kB
+                    
+Uploaded to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.2.x.20251227-SNAPSHOT/maven-metadata.xml (1.0 kB at 1.1 kB/s)
+Uploading to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/maven-metadata.xml
+Progress (1): 414 B
+                   
+Uploaded to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/maven-metadata.xml (414 B at 450 B/s)
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  7.050 s
+[[1;34mINFO[m] Finished at: 2026-03-16T14:21:50+08:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[xmemcached-spring-boot-starter/3.2.x] 成功
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------< [0;36mio.github.hiwepy:xmemcached-spring-boot-starter[0;1m >----------[m
+[[1;34mINFO[m] [1mBuilding io.github.hiwepy:xmemcached-spring-boot-starter 3.3.x.20251227-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.4.0:clean[m [1m(default-clean)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Deleting /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.5.0:enforce[m [1m(default-cli)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[[1;34mINFO[m] Rule 1: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:resources[m [1m(default-resources)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Copying 0 resource from src/main/resources to target/classes
+[[1;34mINFO[m] Copying 3 resources from src/main/resources to target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.13.0:compile[m [1m(default-compile)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Recompiling the module because of [1mchanged source code[m.
+[[1;34mINFO[m] Compiling 10 source files with javac [debug parameters release 17] to target/classes
+[[1;34mINFO[m] 由于在类路径中发现了一个或多个处理程序，因此启用了
+  批注处理。未来发行版的 javac 可能会禁用批注处理，
+  除非至少按名称指定了一个处理程序 (-processor)，
+  或指定了搜索路径 (--processor-path, --processor-module-path)，
+  或显式启用了批注处理 (-proc:only, -proc:full)。
+  可使用 -Xlint:-options 隐藏此消息。
+  可使用 -proc:none 禁用批注处理。
+[[1;34mINFO[m] /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/src/main/java/com/googlecode/xmemcached/spring/boot/XmemcachedOperationTemplate.java: /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/src/main/java/com/googlecode/xmemcached/spring/boot/XmemcachedOperationTemplate.java使用了未经检查或不安全的操作。
+[[1;34mINFO[m] /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/src/main/java/com/googlecode/xmemcached/spring/boot/XmemcachedOperationTemplate.java: 有关详细信息, 请使用 -Xlint:unchecked 重新编译。
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:testResources[m [1m(default-testResources)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Not copying test resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.13.0:testCompile[m [1m(default-testCompile)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Not compiling test sources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:3.5.0:test[m [1m(default-test)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Tests are skipped.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-jar-plugin:3.4.2:jar[m [1m(default-jar)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Building jar: /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/target/xmemcached-spring-boot-starter-3.3.x.20251227-SNAPSHOT.jar
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-source-plugin:3.3.1:jar-no-fork[m [1m(attach-sources)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Building jar: /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/target/xmemcached-spring-boot-starter-3.3.x.20251227-SNAPSHOT-sources.jar
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-install-plugin:3.1.3:install[m [1m(default-install)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Installing /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/pom.xml to /Users/wandl/.m2/repository/com/github/hiwepy/xmemcached-spring-boot-starter/3.3.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.3.x.20251227-SNAPSHOT.pom
+[[1;34mINFO[m] Installing /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/target/xmemcached-spring-boot-starter-3.3.x.20251227-SNAPSHOT.jar to /Users/wandl/.m2/repository/com/github/hiwepy/xmemcached-spring-boot-starter/3.3.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.3.x.20251227-SNAPSHOT.jar
+[[1;34mINFO[m] Installing /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/target/xmemcached-spring-boot-starter-3.3.x.20251227-SNAPSHOT-sources.jar to /Users/wandl/.m2/repository/com/github/hiwepy/xmemcached-spring-boot-starter/3.3.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.3.x.20251227-SNAPSHOT-sources.jar
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-deploy-plugin:3.1.3:deploy[m [1m(default-deploy)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Using alternate deployment repository maven-snapshots::default::https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots
+[[1;33mWARNING[m] Using legacy syntax for alternative repository. Use "maven-snapshots::https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots" instead.
+Downloading from maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.3.x.20251227-SNAPSHOT/maven-metadata.xml
+Uploading to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.3.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.3.x.20251227-20260316.062152-1.pom
+Progress (1): 4.1/14 kB
+Progress (1): 8.2/14 kB
+Progress (1): 12/14 kB 
+Progress (1): 14 kB   
+                   
+Uploaded to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.3.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.3.x.20251227-20260316.062152-1.pom (14 kB at 18 kB/s)
+Uploading to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.3.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.3.x.20251227-20260316.062152-1.jar
+Progress (1): 4.1/35 kB
+Progress (1): 8.2/35 kB
+Progress (1): 12/35 kB 
+Progress (1): 16/35 kB
+Progress (1): 20/35 kB
+Progress (1): 25/35 kB
+Progress (1): 29/35 kB
+Progress (1): 33/35 kB
+Progress (1): 35 kB   
+                   
+Uploaded to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.3.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.3.x.20251227-20260316.062152-1.jar (35 kB at 32 kB/s)
+Uploading to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.3.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.3.x.20251227-20260316.062152-1-sources.jar
+Progress (1): 4.1/17 kB
+Progress (1): 8.2/17 kB
+Progress (1): 12/17 kB 
+Progress (1): 16/17 kB
+Progress (1): 17 kB   
+                   
+Uploaded to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.3.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.3.x.20251227-20260316.062152-1-sources.jar (17 kB at 18 kB/s)
+Downloading from maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/maven-metadata.xml
+Progress (1): 414 B
+                   
+Downloaded from maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/maven-metadata.xml (414 B at 2.2 kB/s)
+Uploading to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.3.x.20251227-SNAPSHOT/maven-metadata.xml
+Progress (1): 1.0 kB
+                    
+Uploaded to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.3.x.20251227-SNAPSHOT/maven-metadata.xml (1.0 kB at 1.2 kB/s)
+Uploading to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/maven-metadata.xml
+Progress (1): 463 B
+                   
+Uploaded to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/maven-metadata.xml (463 B at 511 B/s)
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  6.482 s
+[[1;34mINFO[m] Finished at: 2026-03-16T14:21:57+08:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[xmemcached-spring-boot-starter/3.3.x] 成功
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------< [0;36mio.github.hiwepy:xmemcached-spring-boot-starter[0;1m >----------[m
+[[1;34mINFO[m] [1mBuilding io.github.hiwepy:xmemcached-spring-boot-starter 3.4.x.20251227-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.4.0:clean[m [1m(default-clean)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Deleting /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.5.0:enforce[m [1m(default-cli)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[[1;34mINFO[m] Rule 1: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:resources[m [1m(default-resources)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Copying 0 resource from src/main/resources to target/classes
+[[1;34mINFO[m] Copying 3 resources from src/main/resources to target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.13.0:compile[m [1m(default-compile)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Recompiling the module because of [1mchanged source code[m.
+[[1;34mINFO[m] Compiling 10 source files with javac [debug parameters release 17] to target/classes
+[[1;34mINFO[m] 由于在类路径中发现了一个或多个处理程序，因此启用了
+  批注处理。未来发行版的 javac 可能会禁用批注处理，
+  除非至少按名称指定了一个处理程序 (-processor)，
+  或指定了搜索路径 (--processor-path, --processor-module-path)，
+  或显式启用了批注处理 (-proc:only, -proc:full)。
+  可使用 -Xlint:-options 隐藏此消息。
+  可使用 -proc:none 禁用批注处理。
+[[1;34mINFO[m] /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/src/main/java/com/googlecode/xmemcached/spring/boot/XmemcachedOperationTemplate.java: /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/src/main/java/com/googlecode/xmemcached/spring/boot/XmemcachedOperationTemplate.java使用了未经检查或不安全的操作。
+[[1;34mINFO[m] /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/src/main/java/com/googlecode/xmemcached/spring/boot/XmemcachedOperationTemplate.java: 有关详细信息, 请使用 -Xlint:unchecked 重新编译。
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:testResources[m [1m(default-testResources)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Not copying test resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.13.0:testCompile[m [1m(default-testCompile)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Not compiling test sources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:3.5.0:test[m [1m(default-test)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Tests are skipped.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-jar-plugin:3.4.2:jar[m [1m(default-jar)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Building jar: /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/target/xmemcached-spring-boot-starter-3.4.x.20251227-SNAPSHOT.jar
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-source-plugin:3.3.1:jar-no-fork[m [1m(attach-sources)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Building jar: /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/target/xmemcached-spring-boot-starter-3.4.x.20251227-SNAPSHOT-sources.jar
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-install-plugin:3.1.3:install[m [1m(default-install)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Installing /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/pom.xml to /Users/wandl/.m2/repository/com/github/hiwepy/xmemcached-spring-boot-starter/3.4.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.4.x.20251227-SNAPSHOT.pom
+[[1;34mINFO[m] Installing /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/target/xmemcached-spring-boot-starter-3.4.x.20251227-SNAPSHOT.jar to /Users/wandl/.m2/repository/com/github/hiwepy/xmemcached-spring-boot-starter/3.4.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.4.x.20251227-SNAPSHOT.jar
+[[1;34mINFO[m] Installing /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/target/xmemcached-spring-boot-starter-3.4.x.20251227-SNAPSHOT-sources.jar to /Users/wandl/.m2/repository/com/github/hiwepy/xmemcached-spring-boot-starter/3.4.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.4.x.20251227-SNAPSHOT-sources.jar
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-deploy-plugin:3.1.3:deploy[m [1m(default-deploy)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Using alternate deployment repository maven-snapshots::default::https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots
+[[1;33mWARNING[m] Using legacy syntax for alternative repository. Use "maven-snapshots::https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots" instead.
+Downloading from maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.4.x.20251227-SNAPSHOT/maven-metadata.xml
+Uploading to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.4.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.4.x.20251227-20260316.062159-1.pom
+Progress (1): 4.1/14 kB
+Progress (1): 8.2/14 kB
+Progress (1): 12/14 kB 
+Progress (1): 14 kB   
+                   
+Uploaded to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.4.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.4.x.20251227-20260316.062159-1.pom (14 kB at 16 kB/s)
+Uploading to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.4.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.4.x.20251227-20260316.062159-1.jar
+Progress (1): 4.1/35 kB
+Progress (1): 8.2/35 kB
+Progress (1): 12/35 kB 
+Progress (1): 16/35 kB
+Progress (1): 20/35 kB
+Progress (1): 25/35 kB
+Progress (1): 29/35 kB
+Progress (1): 33/35 kB
+Progress (1): 35 kB   
+                   
+Uploaded to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.4.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.4.x.20251227-20260316.062159-1.jar (35 kB at 31 kB/s)
+Uploading to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.4.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.4.x.20251227-20260316.062159-1-sources.jar
+Progress (1): 4.1/17 kB
+Progress (1): 8.2/17 kB
+Progress (1): 12/17 kB 
+Progress (1): 16/17 kB
+Progress (1): 17 kB   
+                   
+Uploaded to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.4.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.4.x.20251227-20260316.062159-1-sources.jar (17 kB at 12 kB/s)
+Downloading from maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/maven-metadata.xml
+Progress (1): 463 B
+                   
+Downloaded from maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/maven-metadata.xml (463 B at 1.9 kB/s)
+Uploading to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.4.x.20251227-SNAPSHOT/maven-metadata.xml
+Progress (1): 1.0 kB
+                    
+Uploaded to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.4.x.20251227-SNAPSHOT/maven-metadata.xml (1.0 kB at 1.0 kB/s)
+Uploading to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/maven-metadata.xml
+Progress (1): 512 B
+                   
+Uploaded to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/maven-metadata.xml (512 B at 551 B/s)
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  7.202 s
+[[1;34mINFO[m] Finished at: 2026-03-16T14:22:04+08:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[xmemcached-spring-boot-starter/3.4.x] 成功
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------< [0;36mio.github.hiwepy:xmemcached-spring-boot-starter[0;1m >----------[m
+[[1;34mINFO[m] [1mBuilding io.github.hiwepy:xmemcached-spring-boot-starter 3.5.x.20251227-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.4.0:clean[m [1m(default-clean)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Deleting /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.5.0:enforce[m [1m(default-cli)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[[1;34mINFO[m] Rule 1: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:resources[m [1m(default-resources)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Copying 0 resource from src/main/resources to target/classes
+[[1;34mINFO[m] Copying 3 resources from src/main/resources to target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.13.0:compile[m [1m(default-compile)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Recompiling the module because of [1mchanged source code[m.
+[[1;34mINFO[m] Compiling 10 source files with javac [debug parameters release 17] to target/classes
+[[1;34mINFO[m] 由于在类路径中发现了一个或多个处理程序，因此启用了
+  批注处理。未来发行版的 javac 可能会禁用批注处理，
+  除非至少按名称指定了一个处理程序 (-processor)，
+  或指定了搜索路径 (--processor-path, --processor-module-path)，
+  或显式启用了批注处理 (-proc:only, -proc:full)。
+  可使用 -Xlint:-options 隐藏此消息。
+  可使用 -proc:none 禁用批注处理。
+[[1;34mINFO[m] /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/src/main/java/com/googlecode/xmemcached/spring/boot/XmemcachedOperationTemplate.java: /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/src/main/java/com/googlecode/xmemcached/spring/boot/XmemcachedOperationTemplate.java使用了未经检查或不安全的操作。
+[[1;34mINFO[m] /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/src/main/java/com/googlecode/xmemcached/spring/boot/XmemcachedOperationTemplate.java: 有关详细信息, 请使用 -Xlint:unchecked 重新编译。
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:testResources[m [1m(default-testResources)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Not copying test resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.13.0:testCompile[m [1m(default-testCompile)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Not compiling test sources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:3.5.0:test[m [1m(default-test)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Tests are skipped.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-jar-plugin:3.4.2:jar[m [1m(default-jar)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Building jar: /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/target/xmemcached-spring-boot-starter-3.5.x.20251227-SNAPSHOT.jar
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-source-plugin:3.3.1:jar-no-fork[m [1m(attach-sources)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Building jar: /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/target/xmemcached-spring-boot-starter-3.5.x.20251227-SNAPSHOT-sources.jar
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-install-plugin:3.1.3:install[m [1m(default-install)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Installing /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/pom.xml to /Users/wandl/.m2/repository/com/github/hiwepy/xmemcached-spring-boot-starter/3.5.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.5.x.20251227-SNAPSHOT.pom
+[[1;34mINFO[m] Installing /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/target/xmemcached-spring-boot-starter-3.5.x.20251227-SNAPSHOT.jar to /Users/wandl/.m2/repository/com/github/hiwepy/xmemcached-spring-boot-starter/3.5.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.5.x.20251227-SNAPSHOT.jar
+[[1;34mINFO[m] Installing /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/target/xmemcached-spring-boot-starter-3.5.x.20251227-SNAPSHOT-sources.jar to /Users/wandl/.m2/repository/com/github/hiwepy/xmemcached-spring-boot-starter/3.5.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.5.x.20251227-SNAPSHOT-sources.jar
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-deploy-plugin:3.1.3:deploy[m [1m(default-deploy)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Using alternate deployment repository maven-snapshots::default::https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots
+[[1;33mWARNING[m] Using legacy syntax for alternative repository. Use "maven-snapshots::https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots" instead.
+Downloading from maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.5.x.20251227-SNAPSHOT/maven-metadata.xml
+Uploading to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.5.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.5.x.20251227-20260316.062206-1.pom
+Progress (1): 4.1/14 kB
+Progress (1): 8.2/14 kB
+Progress (1): 12/14 kB 
+Progress (1): 14 kB   
+                   
+Uploaded to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.5.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.5.x.20251227-20260316.062206-1.pom (14 kB at 14 kB/s)
+Uploading to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.5.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.5.x.20251227-20260316.062206-1.jar
+Progress (1): 4.1/35 kB
+Progress (1): 8.2/35 kB
+Progress (1): 12/35 kB 
+Progress (1): 16/35 kB
+Progress (1): 20/35 kB
+Progress (1): 25/35 kB
+Progress (1): 29/35 kB
+Progress (1): 33/35 kB
+Progress (1): 35 kB   
+                   
+Uploaded to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.5.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.5.x.20251227-20260316.062206-1.jar (35 kB at 35 kB/s)
+Uploading to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.5.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.5.x.20251227-20260316.062206-1-sources.jar
+Progress (1): 4.1/17 kB
+Progress (1): 8.2/17 kB
+Progress (1): 12/17 kB 
+Progress (1): 16/17 kB
+Progress (1): 17 kB   
+                   
+Uploaded to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.5.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-3.5.x.20251227-20260316.062206-1-sources.jar (17 kB at 17 kB/s)
+Downloading from maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/maven-metadata.xml
+Progress (1): 512 B
+                   
+Downloaded from maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/maven-metadata.xml (512 B at 2.3 kB/s)
+Uploading to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.5.x.20251227-SNAPSHOT/maven-metadata.xml
+Progress (1): 1.0 kB
+                    
+Uploaded to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/3.5.x.20251227-SNAPSHOT/maven-metadata.xml (1.0 kB at 989 B/s)
+Uploading to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/maven-metadata.xml
+Progress (1): 561 B
+                   
+Uploaded to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/maven-metadata.xml (561 B at 623 B/s)
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  6.840 s
+[[1;34mINFO[m] Finished at: 2026-03-16T14:22:12+08:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[xmemcached-spring-boot-starter/3.5.x] 成功
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------< [0;36mio.github.hiwepy:xmemcached-spring-boot-starter[0;1m >----------[m
+[[1;34mINFO[m] [1mBuilding io.github.hiwepy:xmemcached-spring-boot-starter 4.0.x.20251227-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.4.0:clean[m [1m(default-clean)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Deleting /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.5.0:enforce[m [1m(default-cli)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[[1;34mINFO[m] Rule 1: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:resources[m [1m(default-resources)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Copying 0 resource from src/main/resources to target/classes
+[[1;34mINFO[m] Copying 3 resources from src/main/resources to target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.13.0:compile[m [1m(default-compile)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Recompiling the module because of [1mchanged source code[m.
+[[1;34mINFO[m] Compiling 10 source files with javac [debug parameters release 17] to target/classes
+[[1;34mINFO[m] 由于在类路径中发现了一个或多个处理程序，因此启用了
+  批注处理。未来发行版的 javac 可能会禁用批注处理，
+  除非至少按名称指定了一个处理程序 (-processor)，
+  或指定了搜索路径 (--processor-path, --processor-module-path)，
+  或显式启用了批注处理 (-proc:only, -proc:full)。
+  可使用 -Xlint:-options 隐藏此消息。
+  可使用 -proc:none 禁用批注处理。
+[[1;34mINFO[m] /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/src/main/java/com/googlecode/xmemcached/spring/boot/XmemcachedOperationTemplate.java: /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/src/main/java/com/googlecode/xmemcached/spring/boot/XmemcachedOperationTemplate.java使用了未经检查或不安全的操作。
+[[1;34mINFO[m] /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/src/main/java/com/googlecode/xmemcached/spring/boot/XmemcachedOperationTemplate.java: 有关详细信息, 请使用 -Xlint:unchecked 重新编译。
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:testResources[m [1m(default-testResources)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Not copying test resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.13.0:testCompile[m [1m(default-testCompile)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Not compiling test sources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:3.5.0:test[m [1m(default-test)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Tests are skipped.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-jar-plugin:3.4.2:jar[m [1m(default-jar)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Building jar: /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/target/xmemcached-spring-boot-starter-4.0.x.20251227-SNAPSHOT.jar
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-source-plugin:3.3.1:jar-no-fork[m [1m(attach-sources)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Building jar: /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/target/xmemcached-spring-boot-starter-4.0.x.20251227-SNAPSHOT-sources.jar
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-install-plugin:3.1.3:install[m [1m(default-install)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Installing /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/pom.xml to /Users/wandl/.m2/repository/com/github/hiwepy/xmemcached-spring-boot-starter/4.0.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-4.0.x.20251227-SNAPSHOT.pom
+[[1;34mINFO[m] Installing /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/target/xmemcached-spring-boot-starter-4.0.x.20251227-SNAPSHOT.jar to /Users/wandl/.m2/repository/com/github/hiwepy/xmemcached-spring-boot-starter/4.0.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-4.0.x.20251227-SNAPSHOT.jar
+[[1;34mINFO[m] Installing /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/target/xmemcached-spring-boot-starter-4.0.x.20251227-SNAPSHOT-sources.jar to /Users/wandl/.m2/repository/com/github/hiwepy/xmemcached-spring-boot-starter/4.0.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-4.0.x.20251227-SNAPSHOT-sources.jar
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-deploy-plugin:3.1.3:deploy[m [1m(default-deploy)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Using alternate deployment repository maven-snapshots::default::https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots
+[[1;33mWARNING[m] Using legacy syntax for alternative repository. Use "maven-snapshots::https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots" instead.
+Downloading from maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/4.0.x.20251227-SNAPSHOT/maven-metadata.xml
+Uploading to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/4.0.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-4.0.x.20251227-20260316.062214-1.pom
+Progress (1): 4.1/14 kB
+Progress (1): 8.2/14 kB
+Progress (1): 12/14 kB 
+Progress (1): 14 kB   
+                   
+Uploaded to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/4.0.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-4.0.x.20251227-20260316.062214-1.pom (14 kB at 14 kB/s)
+Uploading to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/4.0.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-4.0.x.20251227-20260316.062214-1.jar
+Progress (1): 4.1/35 kB
+Progress (1): 8.2/35 kB
+Progress (1): 12/35 kB 
+Progress (1): 16/35 kB
+Progress (1): 20/35 kB
+Progress (1): 25/35 kB
+Progress (1): 29/35 kB
+Progress (1): 33/35 kB
+Progress (1): 35 kB   
+                   
+Uploaded to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/4.0.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-4.0.x.20251227-20260316.062214-1.jar (35 kB at 34 kB/s)
+Uploading to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/4.0.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-4.0.x.20251227-20260316.062214-1-sources.jar
+Progress (1): 4.1/17 kB
+Progress (1): 8.2/17 kB
+Progress (1): 12/17 kB 
+Progress (1): 16/17 kB
+Progress (1): 17 kB   
+                   
+Uploaded to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/4.0.x.20251227-SNAPSHOT/xmemcached-spring-boot-starter-4.0.x.20251227-20260316.062214-1-sources.jar (17 kB at 15 kB/s)
+Downloading from maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/maven-metadata.xml
+Progress (1): 561 B
+                   
+Downloaded from maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/maven-metadata.xml (561 B at 2.5 kB/s)
+Uploading to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/4.0.x.20251227-SNAPSHOT/maven-metadata.xml
+Progress (1): 1.0 kB
+                    
+Uploaded to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/4.0.x.20251227-SNAPSHOT/maven-metadata.xml (1.0 kB at 1.0 kB/s)
+Uploading to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/maven-metadata.xml
+Progress (1): 610 B
+                   
+Uploaded to maven-snapshots: https://packages.aliyun.com/5fdc0afd99b59ba3c5ead757/maven/maven-snapshots/com/github/hiwepy/xmemcached-spring-boot-starter/maven-metadata.xml (610 B at 636 B/s)
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  7.084 s
+[[1;34mINFO[m] Finished at: 2026-03-16T14:22:19+08:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[xmemcached-spring-boot-starter/4.0.x] 成功
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------< [0;36mio.github.hiwepy:xmemcached-spring-boot-starter[0;1m >----------[m
+[[1;34mINFO[m] [1mBuilding io.github.hiwepy:xmemcached-spring-boot-starter 2.0.1-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+Downloading from aiban-tianyin-core: https://aiban-maven.pkg.coding.net/repository/tianyin/core/com/googlecode/xmemcached/xmemcached/2.4.7/xmemcached-2.4.7.pom
+Progress (1): 3.8 kB
+Progress (1): 7.9 kB
+Progress (1): 12 kB 
+Progress (1): 14 kB
+                   
+Downloaded from aiban-tianyin-core: https://aiban-maven.pkg.coding.net/repository/tianyin/core/com/googlecode/xmemcached/xmemcached/2.4.7/xmemcached-2.4.7.pom (14 kB at 15 kB/s)
+Downloading from aiban-tianyin-core: https://aiban-maven.pkg.coding.net/repository/tianyin/core/com/googlecode/xmemcached/xmemcached/2.4.7/xmemcached-2.4.7.jar
+Progress (1): 4.1 kB
+Progress (1): 8.2 kB
+Progress (1): 12 kB 
+Progress (1): 15 kB
+Progress (1): 19 kB
+Progress (1): 23 kB
+Progress (1): 27 kB
+Progress (1): 30 kB
+Progress (1): 33 kB
+Progress (1): 37 kB
+Progress (1): 39 kB
+Progress (1): 43 kB
+Progress (1): 47 kB
+Progress (1): 51 kB
+Progress (1): 55 kB
+Progress (1): 59 kB
+Progress (1): 64 kB
+Progress (1): 68 kB
+Progress (1): 70 kB
+Progress (1): 72 kB
+Progress (1): 76 kB
+Progress (1): 81 kB
+Progress (1): 85 kB
+Progress (1): 89 kB
+Progress (1): 93 kB
+Progress (1): 97 kB
+Progress (1): 101 kB
+Progress (1): 105 kB
+Progress (1): 109 kB
+Progress (1): 113 kB
+Progress (1): 117 kB
+Progress (1): 122 kB
+Progress (1): 126 kB
+Progress (1): 130 kB
+Progress (1): 134 kB
+Progress (1): 138 kB
+Progress (1): 142 kB
+Progress (1): 146 kB
+Progress (1): 150 kB
+Progress (1): 154 kB
+Progress (1): 158 kB
+Progress (1): 162 kB
+Progress (1): 167 kB
+Progress (1): 171 kB
+Progress (1): 175 kB
+Progress (1): 179 kB
+Progress (1): 183 kB
+Progress (1): 187 kB
+Progress (1): 191 kB
+Progress (1): 195 kB
+Progress (1): 199 kB
+Progress (1): 203 kB
+Progress (1): 208 kB
+Progress (1): 212 kB
+Progress (1): 216 kB
+Progress (1): 220 kB
+Progress (1): 224 kB
+Progress (1): 228 kB
+Progress (1): 232 kB
+Progress (1): 236 kB
+Progress (1): 240 kB
+Progress (1): 244 kB
+Progress (1): 249 kB
+Progress (1): 253 kB
+Progress (1): 257 kB
+Progress (1): 261 kB
+Progress (1): 265 kB
+Progress (1): 269 kB
+Progress (1): 273 kB
+Progress (1): 277 kB
+Progress (1): 281 kB
+Progress (1): 285 kB
+Progress (1): 289 kB
+Progress (1): 294 kB
+Progress (1): 298 kB
+Progress (1): 302 kB
+Progress (1): 306 kB
+Progress (1): 310 kB
+Progress (1): 314 kB
+Progress (1): 318 kB
+Progress (1): 322 kB
+Progress (1): 326 kB
+Progress (1): 330 kB
+Progress (1): 334 kB
+Progress (1): 339 kB
+Progress (1): 343 kB
+Progress (1): 347 kB
+Progress (1): 351 kB
+Progress (1): 355 kB
+Progress (1): 359 kB
+Progress (1): 363 kB
+Progress (1): 367 kB
+Progress (1): 371 kB
+Progress (1): 375 kB
+Progress (1): 380 kB
+Progress (1): 384 kB
+Progress (1): 388 kB
+Progress (1): 392 kB
+Progress (1): 396 kB
+Progress (1): 400 kB
+Progress (1): 404 kB
+Progress (1): 408 kB
+Progress (1): 412 kB
+Progress (1): 416 kB
+Progress (1): 420 kB
+Progress (1): 425 kB
+Progress (1): 429 kB
+Progress (1): 433 kB
+Progress (1): 437 kB
+Progress (1): 441 kB
+Progress (1): 445 kB
+Progress (1): 449 kB
+Progress (1): 453 kB
+Progress (1): 457 kB
+Progress (1): 461 kB
+Progress (1): 466 kB
+Progress (1): 470 kB
+Progress (1): 472 kB
+                    
+Downloaded from aiban-tianyin-core: https://aiban-maven.pkg.coding.net/repository/tianyin/core/com/googlecode/xmemcached/xmemcached/2.4.7/xmemcached-2.4.7.jar (472 kB at 477 kB/s)
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.1.0:clean[m [1m(default-clean)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Deleting /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.0.0:enforce[m [1m(default-cli)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:resources[m [1m(default-resources)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 0 resource
+[[1;34mINFO[m] Copying 2 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:compile[m [1m(default-compile)[m @ [36mxmemcached-spring-boot-starter[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 10 source files to /Users/wandl/workspaces/workspace-ddd4j/workspace-ddd4j-boot-starters/xmemcached-spring-boot-starter/target/classes
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  2.747 s
+[[1;34mINFO[m] Finished at: 2026-03-16T14:22:22+08:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;31mERROR[m] Failed to execute goal [32morg.apache.maven.plugins:maven-compiler-plugin:3.8.1:compile[m [1m(default-compile)[m on project [36mxmemcached-spring-boot-starter[m: [1;31mFatal error compiling[m: java.lang.NoSuchFieldError: Class com.sun.tools.javac.tree.JCTree$JCImport does not have member field 'com.sun.tools.javac.tree.JCTree qualid' -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+[xmemcached-spring-boot-starter/main] 失败 - 查看日志
