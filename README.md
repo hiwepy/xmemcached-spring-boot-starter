@@ -20,7 +20,7 @@ Memcached 是一个费开源、高性能、分布式内存对象缓存系统，�
 
 ``` xml
 <dependency>
-	<groupId>com.github.hiwepy</groupId>
+	<groupId>io.github.easy4j</groupId>
 	<artifactId>xmemcached-spring-boot-starter</artifactId>
 	<version>${project.version}</version>
 </dependency>
