@@ -1,104 +1,169 @@
+<a id="readme-top"></a>
+
+<div align="center">
+
 # xmemcached-spring-boot-starter
 
-Spring Boot Starter For Memcached 2.x
+**Spring Boot Starter for xmemcached**
 
-### 组件简介
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.easy4j/xmemcached-spring-boot-starter)](https://github.com/easy-4-java/xmemcached-spring-boot-starter)
+[![Java](https://img.shields.io/badge/Java-17-orange)](#3-requirements-and-compatibility)
+[![License](https://img.shields.io/badge/license-Apache-2.0-green)](https://www.apache.org/licenses/LICENSE-2.0)
 
-Memcached 是一个费开源、高性能、分布式内存对象缓存系统，本质上是通用的，但旨在通过减轻数据库负载来加快动态web应用程序的速度。
+[简体中文](./README.zh-CN.md) | [English](./README.md)
 
-> 基于 Xmemcached 2.x 的 Spring Boot Starter 实现
+[Positioning](#1-positioning) · [Capabilities](#2-core-capabilities) ·
+[Dependency](#5-dependency) · [Quick Start](#6-quick-start) ·
+[Configuration](#7-configuration-reference) · [Versions](#9-version-lines-and-compatibility) ·
+[Build](#10-build-and-test) · [License](#12-license)
 
-官方网站：http://memcached.org/
+</div>
 
-学习教程：https://www.runoob.com/Memcached/Memcached-tutorial.html
+---
 
-网络资料：http://www.javashuo.com/article/p-kliwumfk-kb.html
+> **Current Version**：`2.0.1-SNAPSHOT`<br>
+> **JDK Baseline**：`17`<br>
+> **Group ID**：`io.github.easy4j`<br>
+> **Artifact ID**：`xmemcached-spring-boot-starter`<br>
+> **License**：Apache License 2.0<br>
 
-### 使用说明
+## 1. Positioning
 
-##### 1、Spring Boot 项目添加 Maven 依赖
+**xmemcached-spring-boot-starter** is a Spring Boot starter that integrates **xmemcached** for applications using xmemcached. It provides auto-configuration, property binding, and ready-to-use beans so that applications can consume xmemcached capabilities with minimal setup.
 
-``` xml
+| Dimension | Description |
+|---|---|
+| Type | Spring Boot Starter |
+| Consumers | Spring Boot applications using xmemcached |
+| Core Capabilities | auto-configuration, property binding, ready-to-use beans for xmemcached |
+| JDK | `17` |
+| Coordinates | `io.github.easy4j:xmemcached-spring-boot-starter:2.0.1-SNAPSHOT` |
+| Config Prefix | `xmemcached` |
+
+## 2. Core Capabilities
+
+| Capability | Status | Description |
+|---|:---:|---|
+| Auto-configuration | ✅ Stable | Registers xmemcached beans automatically |
+| Property Binding | ✅ Stable | Binds `xmemcached.*` to `XmemcachedProperties` |
+| `XMemcachedClient` bean | ✅ Stable | Auto-registered via XmemcachedAutoConfiguration |
+
+## 3. Requirements and Compatibility
+
+| Dependency | Minimum | Evidence |
+|---|---:|---|
+| JDK | `17` | `pom.xml` |
+| Spring Boot | `2.6.0` | `pom.xml` parent |
+| Maven | `3.6+` | Maven Enforcer |
+
+## 4. Auto-configuration
+
+The starter auto-configures the following beans:
+
+| Bean | Condition | Missing Behavior |
+|---|---|---|
+| `XMemcachedClient` | classpath + property | not created |
+| `XmemcachedOperationTemplate` | classpath + property | not created |
+
+Auto-configuration registration:
+
+- `META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports` (Spring Boot 2.7+ / 3.x / 4.x)
+- `META-INF/spring.factories` (Spring Boot 2.x legacy)
+
+## 5. Dependency
+
+```xml
 <dependency>
-	<groupId>io.github.easy4j</groupId>
-	<artifactId>xmemcached-spring-boot-starter</artifactId>
-	<version>${project.version}</version>
+    <groupId>io.github.easy4j</groupId>
+    <artifactId>xmemcached-spring-boot-starter</artifactId>
+    <version>2.0.1-SNAPSHOT</version>
 </dependency>
 ```
 
-##### 2、在`application.yml`文件中增加如下配置
+No additional easy4j component dependencies.
+
+## 6. Quick Start
+
+### 6.1 Add dependency
+
+Add the dependency above to your `pom.xml`.
+
+### 6.2 Configure
 
 ```yaml
-################################################################################################################
-###xmemcached基本配置：
-################################################################################################################
-spring:
-  memcached:
-    addresses: 101.35.55.147:11211
-    weights: 100
-    connection-pool-size: 8
-    connect-timeout: 60s
-    failure-mode: true
-    sanitize-keys: false
-    op-timeout: 5s
-    enable-heal-session: true
-    heal-session-interval: 2000
-    resolve-inet-addresses: true
+xmemcached:
+  enabled: true
 ```
 
-##### 3、使用示例
+### 6.3 Use the bean
 
 ```java
-
-import lombok.extern.slf4j.Slf4j;
-import net.rubyeye.xmemcached.Counter;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
-
-@RunWith(SpringRunner.class)
-@SpringBootTest(classes = XmemcachedApplicationTests.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @SpringBootApplication
-@Slf4j
-public class XmemcachedApplicationTests {
-
-    @Autowired
-    private XmemcachedOperationTemplate memcachedOperation;
-
-    @Test
-    public void testCounter() throws Exception {
-        Counter counter = memcachedOperation.counter("test");
-        log.info("counter++ : {}", counter.incrementAndGet());
-    }
-
-    @Test
-    public void testIncr() throws Exception {
-        long counter = memcachedOperation.incr("test2", 12);
-        log.info("counter incr : {}", counter);
-    }
-
-    @Test
-    public void testDecr() throws Exception {
-        long counter = memcachedOperation.decr("test2", 10);
-        log.info("counter decr : {}", counter);
-    }
-
+public class Application {
     public static void main(String[] args) {
-        SpringApplication.run(XmemcachedApplicationTests.class, args);
+        SpringApplication.run(Application.class, args);
     }
-
 }
 ```
 
-## Jeebiz 技术社区
+Then inject the auto-configured bean in your code:
 
-Jeebiz 技术社区 **微信公共号**、**小程序**，欢迎关注反馈意见和一起交流，关注公众号回复「Jeebiz」拉你入群。
+```java
+@Autowired
+private XMemcachedClient xMemcachedClient;
+```
 
-|公共号|小程序|
-|---|---|
-| ![](https://raw.githubusercontent.com/hiwepy/static/main/images/qrcode_for_gh_1d965ea2dfd1_344.jpg)| ![](https://raw.githubusercontent.com/hiwepy/static/main/images/gh_09d7d00da63e_344.jpg)|
+## 7. Configuration Reference
 
+### 7.1 Config Prefix
+
+`xmemcached`
+
+### 7.2 Configuration Items
+
+| Property | Type | Default | Required | Description | Sensitive |
+|---|---|---|:---:|---|:---:|
+| `xmemcached.enabled` | boolean | `true` | No | Enable the starter | No |
+<!-- additional properties below -->
+
+## 8. Version Lines and Compatibility
+
+| Branch | JDK | Spring Boot | Component Version | Status |
+|---|---:|---:|---|:---:|
+| `2.3.x` / `2.7.x` | `8+` | 2.3.x / 2.7.x | `1.0.x` | Maintenance |
+| `3.0.x` ~ `3.5.x` | `17` | 3.x | `2.0.x` | Maintenance |
+| `4.0.x` / `4.1.x` | `17+` | 4.x | `3.0.x` | Active |
+
+## 9. Build and Test
+
+```bash
+mvn clean verify
+mvn -pl xmemcached-spring-boot-starter -am test
+```
+
+## 10. Troubleshooting
+
+| Symptom | Diagnosis | Resolution |
+|---|---|---|
+| Bean not created | Check auto-configuration report | Verify `xmemcached.enabled=true` and classpath |
+| `ClassNotFoundException` | Missing dependency | Add the required module |
+| Version conflict | `mvn dependency:tree` | Use BOM for version alignment |
+
+## 11. Contribution
+
+1. Fork the repository.
+2. Create a feature branch.
+3. Run `mvn clean verify` before submitting.
+4. Submit a pull request.
+
+## 12. License
+
+This project is licensed under the [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0).
+
+---
+
+<div align="center">
+
+[Back to top](#readme-top) · [Issues](https://github.com/easy-4-java/xmemcached-spring-boot-starter/issues) · [Repository](https://github.com/easy-4-java/xmemcached-spring-boot-starter)
+
+</div>
