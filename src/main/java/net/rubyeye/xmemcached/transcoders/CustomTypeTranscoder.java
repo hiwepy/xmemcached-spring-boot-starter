@@ -1,5 +1,6 @@
 package net.rubyeye.xmemcached.transcoders;
 
+/**\n * Auto-configuration for CustomTypeTranscoder.\n *\n * @author [@Loong Wan](https://github.com/loong10k)\n * @since 1.0.0\n */
 public class CustomTypeTranscoder<T> extends BaseSerializingTranscoder implements Transcoder<T> {
 
     @Override

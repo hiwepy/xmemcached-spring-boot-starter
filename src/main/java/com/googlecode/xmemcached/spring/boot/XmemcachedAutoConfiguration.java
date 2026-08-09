@@ -21,6 +21,7 @@ import java.util.stream.Stream;
 @Configuration
 @ConditionalOnClass({ XMemcachedClient.class })
 @EnableConfigurationProperties({ XmemcachedProperties.class})
+/**\n * Auto-configuration for XmemcachedAutoConfiguration.\n *\n * @author [@Loong Wan](https://github.com/loong10k)\n * @since 1.0.0\n */
 public class XmemcachedAutoConfiguration {
 
 	@Bean(destroyMethod = "shutdown")
