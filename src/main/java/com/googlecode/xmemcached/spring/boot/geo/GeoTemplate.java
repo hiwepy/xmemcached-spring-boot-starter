@@ -1,15 +1,17 @@
 package com.googlecode.xmemcached.spring.boot.geo;
 
-import lombok.extern.slf4j.Slf4j;
 import org.gavaghan.geodesy.Ellipsoid;
 import org.gavaghan.geodesy.GeodeticCalculator;
 import org.gavaghan.geodesy.GeodeticCurve;
 import org.gavaghan.geodesy.GlobalCoordinates;
 
-@Slf4j
+/**
+ * Utility for calculating geographic distances between coordinates.
+ *
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
+ */
 public class GeoTemplate {
-
-
 
 	/**
 	 * 计算两点之间距离 https://www.cnblogs.com/zhaoyanhaoBlog/p/10121499.html
@@ -26,11 +28,6 @@ public class GeoTemplate {
 
 		double lon1 = (Math.PI / 180) * longitude1;
 		double lon2 = (Math.PI / 180) * longitude2;
-
-//      double Lat1r = (Math.PI/180)*(gp1.getLatitudeE6()/1E6);
-//      double Lat2r = (Math.PI/180)*(gp2.getLatitudeE6()/1E6);
-//      double Lon1r = (Math.PI/180)*(gp1.getLongitudeE6()/1E6);
-//      double Lon2r = (Math.PI/180)*(gp2.getLongitudeE6()/1E6);
 
 		// 地球半径
 		double R = 6371;

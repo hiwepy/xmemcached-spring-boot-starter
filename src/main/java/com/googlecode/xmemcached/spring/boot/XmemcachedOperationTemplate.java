@@ -1,11 +1,12 @@
 package com.googlecode.xmemcached.spring.boot;
 
-import lombok.extern.slf4j.Slf4j;
 import net.rubyeye.xmemcached.CASOperation;
 import net.rubyeye.xmemcached.Counter;
 import net.rubyeye.xmemcached.GetsResponse;
 import net.rubyeye.xmemcached.XMemcachedClient;
 import net.rubyeye.xmemcached.transcoders.Transcoder;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.util.CollectionUtils;
 
 import java.math.BigDecimal;
@@ -17,8 +18,15 @@ import java.util.Objects;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-@Slf4j
+/**
+ * Template for common XMemcached operations.
+ *
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
+ */
 public class XmemcachedOperationTemplate {
+
+    private static final Logger log = LoggerFactory.getLogger(XmemcachedOperationTemplate.class);
 
     public static final Function<Object, String> TO_STRING = member -> Objects.toString(member, null);
 

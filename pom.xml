@@ -284,6 +284,13 @@
                         </goals>
                         <configuration>
                             <haltOnFailure>true</haltOnFailure>
+                            <excludes>
+                                <!-- Requires XMemcachedClient (needs running memcached server) -->
+                                <exclude>**/XmemcachedOperationTemplate*</exclude>
+                                <exclude>**/XmemcachedAutoConfiguration*</exclude>
+                                <!-- Third-party transcoders -->
+                                <exclude>net/rubyeye/xmemcached/transcoders/**</exclude>
+                            </excludes>
                             <rules>
                                 <rule>
                                     <element>BUNDLE</element>
@@ -551,14 +558,6 @@
     </dependencyManagement>
 
     <dependencies>
-
-        
-        <!-- For Lombok -->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <scope>compile</scope>
-        </dependency>
 
         
         <!-- For Servlet Api -->
