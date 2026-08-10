@@ -1,7 +1,7 @@
 package com.googlecode.xmemcached.spring.boot;
 
 /**
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  */
 @SuppressWarnings("serial")
 public class XMemcachedOperationException extends RuntimeException {
