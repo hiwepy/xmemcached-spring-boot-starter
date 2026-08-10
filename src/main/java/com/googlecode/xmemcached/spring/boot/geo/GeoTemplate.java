@@ -8,7 +8,7 @@ import org.gavaghan.geodesy.GlobalCoordinates;
 /**
  * Utility for calculating geographic distances between coordinates.
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 1.0.0
  */
 public class GeoTemplate {

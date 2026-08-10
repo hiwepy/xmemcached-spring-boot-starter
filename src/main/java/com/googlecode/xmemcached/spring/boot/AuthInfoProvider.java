@@ -6,7 +6,7 @@ import java.net.InetSocketAddress;
 import java.util.HashMap;
 import java.util.Map;
 
-/**\n * Auto-configuration for AuthInfoProvider.\n *\n * @author [@Loong Wan](https://github.com/loong10k)\n * @since 1.0.0\n */
+/**\n * Auto-configuration for AuthInfoProvider.\n *\n * @author <a href="https://github.com/loong10k">Loong Wan</a>\n * @since 1.0.0\n */
 public interface AuthInfoProvider {
 
     default Map<InetSocketAddress, AuthInfo> getAuthInfoMap(){
