@@ -1,8 +1,20 @@
 package net.rubyeye.xmemcached.transcoders;
 
+/**
+ * <p>Boolean Transcoder.</p>
+ *
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
+ * @since 1.0.0
+ */
 public class BooleanTranscoder extends PrimitiveTypeTranscoder<Boolean> {
 
     @Override
+    /**
+     * encode.
+     *
+     * @param l the l
+     * @return the result
+     */
     public CachedData encode(Boolean l) {
         /**
          * store integer as string
@@ -32,6 +44,12 @@ public class BooleanTranscoder extends PrimitiveTypeTranscoder<Boolean> {
     }
 
     @Override
+    /**
+     * decode.
+     *
+     * @param d the d
+     * @return the result
+     */
     public Boolean decode(CachedData d) {
         if (this.primitiveAsString) {
             byte[] data = d.getData();
@@ -54,11 +72,21 @@ public class BooleanTranscoder extends PrimitiveTypeTranscoder<Boolean> {
     }
 
     @Override
+    /**
+     * Sets the primitive as string.
+     *
+     * @param primitiveAsString the primitive as string
+     */
     public void setPrimitiveAsString(boolean primitiveAsString) {
         this.primitiveAsString = primitiveAsString;
     }
 
     @Override
+    /**
+     * Sets the pack zeros.
+     *
+     * @param packZeros the pack zeros
+     */
     public void setPackZeros(boolean packZeros) {
         this.tu.setPackZeros(packZeros);
     }

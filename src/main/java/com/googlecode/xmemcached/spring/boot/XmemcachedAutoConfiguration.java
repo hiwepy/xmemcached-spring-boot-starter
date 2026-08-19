@@ -88,6 +88,13 @@ public class XmemcachedAutoConfiguration {
 	}
 
 	@Bean
+	/**
+	 * xmemcached Operation Template.
+	 *
+	 * @param xMemcachedClient the x memcached client
+	 * @param xMemcachedProperties the x memcached properties
+	 * @return the result
+	 */
 	public XmemcachedOperationTemplate xmemcachedOperationTemplate(XMemcachedClient xMemcachedClient, XmemcachedProperties xMemcachedProperties) {
 		return new XmemcachedOperationTemplate(xMemcachedClient, xMemcachedProperties);
 	}

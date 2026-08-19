@@ -6,6 +6,12 @@ import java.util.Objects;
 import java.util.StringJoiner;
 import java.util.function.Function;
 
+/**
+ * <p>Enumeration of Xmemcached Key types.</p>
+ *
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
+ * @since 1.0.0
+ */
 public enum XmemcachedKey {
 
 	/**
@@ -25,6 +31,11 @@ public enum XmemcachedKey {
         this.function = function;
     }
 
+    /**
+     * Returns the desc.
+     *
+     * @return the desc
+     */
     public String getDesc() {
 		return desc;
 	}
@@ -49,6 +60,12 @@ public enum XmemcachedKey {
     public static String REDIS_PREFIX = "rds";
     public final static String DELIMITER = ":";
 
+    /**
+     * get Key Str.
+     *
+     * @param args the args
+     * @return the result
+     */
     public static String getKeyStr(Object... args) {
         StringJoiner tempKey = new StringJoiner(DELIMITER);
         tempKey.add(REDIS_PREFIX);
@@ -61,6 +78,13 @@ public enum XmemcachedKey {
         return tempKey.toString();
     }
 
+    /**
+     * get Thread Key Str.
+     *
+     * @param prefix the prefix
+     * @param args the args
+     * @return the result
+     */
     public static String getThreadKeyStr(String prefix, Object... args) {
 
         StringJoiner tempKey = new StringJoiner(DELIMITER);
@@ -75,6 +99,11 @@ public enum XmemcachedKey {
         return tempKey.toString();
     }
 
+    /**
+     * main.
+     *
+     * @param args the args
+     */
     public static void main(String[] args) {
         System.out.println(getKeyStr(233,""));
     }

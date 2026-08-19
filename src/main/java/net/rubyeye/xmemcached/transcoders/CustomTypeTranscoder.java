@@ -4,6 +4,12 @@ package net.rubyeye.xmemcached.transcoders;
 public class CustomTypeTranscoder<T> extends BaseSerializingTranscoder implements Transcoder<T> {
 
     @Override
+    /**
+     * encode.
+     *
+     * @param l the l
+     * @return the result
+     */
     public CachedData encode(T l) {
         byte[] b = encodeString(l.toString());
         int flags = 0;
@@ -27,24 +33,50 @@ public class CustomTypeTranscoder<T> extends BaseSerializingTranscoder implement
     }
 
     @Override
+    /**
+     * decode.
+     *
+     * @param d the d
+     * @return the result
+     */
     public T decode(CachedData d) {
         return null;
     }
 
     @Override
+    /**
+     * Sets the primitive as string.
+     *
+     * @param primitiveAsString the primitive as string
+     */
     public void setPrimitiveAsString(boolean primitiveAsString) {
     }
 
     @Override
+    /**
+     * Sets the pack zeros.
+     *
+     * @param packZeros the pack zeros
+     */
     public void setPackZeros(boolean packZeros) {
     }
 
     @Override
+    /**
+     * Returns the primitive as string.
+     *
+     * @return the primitive as string
+     */
     public boolean isPrimitiveAsString() {
         return false;
     }
 
     @Override
+    /**
+     * Returns the pack zeros.
+     *
+     * @return the pack zeros
+     */
     public boolean isPackZeros() {
         return false;
     }

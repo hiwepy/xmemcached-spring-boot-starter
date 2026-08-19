@@ -85,6 +85,14 @@ public class GeoTemplate {
 
 	}
 
+	/**
+	 * get Distance.
+	 *
+	 * @param gpsFrom the gps from
+	 * @param gpsTo the gps to
+	 * @param ellipsoid the ellipsoid
+	 * @return the result
+	 */
 	public double getDistance(GlobalCoordinates gpsFrom, GlobalCoordinates gpsTo, Ellipsoid ellipsoid){
 
         // 1、创建GeodeticCalculator，调用计算方法，传入坐标系、经纬度用于计算距离

@@ -1,5 +1,11 @@
 package com.googlecode.xmemcached.spring.boot;
 
+/**
+ * <p>Xmemcached Key Constant.</p>
+ *
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
+ * @since 1.0.0
+ */
 public abstract class XmemcachedKeyConstant {
 
 	/**

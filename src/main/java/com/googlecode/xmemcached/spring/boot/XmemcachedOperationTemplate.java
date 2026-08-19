@@ -61,6 +61,12 @@ public class XmemcachedOperationTemplate {
         this.optTimeout = xMemcachedProperties.getOpTimeout().getSeconds();
     }
 
+    /**
+     * counter.
+     *
+     * @param key the key
+     * @return the result
+     */
     public Counter counter(String key) {
         try {
             return xMemcachedClient.getCounter(key);
@@ -70,6 +76,13 @@ public class XmemcachedOperationTemplate {
         }
     }
 
+    /**
+     * counter.
+     *
+     * @param key the key
+     * @param initialValue the initial value
+     * @return the result
+     */
     public Counter counter(String key, long initialValue) {
         try {
             return xMemcachedClient.getCounter(key, initialValue);
@@ -79,6 +92,13 @@ public class XmemcachedOperationTemplate {
         }
     }
 
+    /**
+     * append.
+     *
+     * @param key the key
+     * @param value the value
+     * @return the result
+     */
     public boolean append(String key, Object value) {
         try {
             return xMemcachedClient.append(key, value);
@@ -88,6 +108,12 @@ public class XmemcachedOperationTemplate {
         }
     }
 
+    /**
+     * append With No Reply.
+     *
+     * @param key the key
+     * @param value the value
+     */
     public void appendWithNoReply(String key, Object value) {
         try {
             xMemcachedClient.appendWithNoReply(key, value);
@@ -97,6 +123,13 @@ public class XmemcachedOperationTemplate {
         }
     }
 
+    /**
+     * prepend.
+     *
+     * @param key the key
+     * @param value the value
+     * @return the result
+     */
     public boolean prepend(String key, Object value) {
         try {
             return xMemcachedClient.prepend(key, value);
@@ -106,6 +139,12 @@ public class XmemcachedOperationTemplate {
         }
     }
 
+    /**
+     * prepend With No Reply.
+     *
+     * @param key the key
+     * @param value the value
+     */
     public void prependWithNoReply(String key, Object value) {
         try {
             xMemcachedClient.prependWithNoReply(key, value);
@@ -242,37 +281,89 @@ public class XmemcachedOperationTemplate {
         }
     }
 
+    /**
+     * get String.
+     *
+     * @param key the key
+     * @return the result
+     */
     public String getString(String key) {
         return getFor(key, TO_STRING);
     }
 
+    /**
+     * get String.
+     *
+     * @param key the key
+     * @param defaultVal the default val
+     * @return the result
+     */
     public String getString(String key, String defaultVal) {
         String rtVal = getString(key);
         return Objects.nonNull(rtVal) ? rtVal : defaultVal;
     }
 
+    /**
+     * get Double.
+     *
+     * @param key the key
+     * @return the result
+     */
     public Double getDouble(String key) {
         return getFor(key, TO_DOUBLE);
     }
 
+    /**
+     * get Double.
+     *
+     * @param key the key
+     * @param defaultVal the default val
+     * @return the result
+     */
     public Double getDouble(String key, double defaultVal) {
         Double rtVal = getDouble(key);
         return Objects.nonNull(rtVal) ? rtVal : defaultVal;
     }
 
+    /**
+     * get Long.
+     *
+     * @param key the key
+     * @return the result
+     */
     public Long getLong(String key) {
         return getFor(key, TO_LONG);
     }
 
+    /**
+     * get Long.
+     *
+     * @param key the key
+     * @param defaultVal the default val
+     * @return the result
+     */
     public Long getLong(String key, long defaultVal) {
         Long rtVal = getLong(key);
         return Objects.nonNull(rtVal) ? rtVal : defaultVal;
     }
 
+    /**
+     * get Integer.
+     *
+     * @param key the key
+     * @return the result
+     */
     public Integer getInteger(String key) {
         return getFor(key, TO_INTEGER);
     }
 
+    /**
+     * get Integer.
+     *
+     * @param key the key
+     * @param defaultVal the default val
+     * @return the result
+     */
     public Integer getInteger(String key, int defaultVal) {
         Integer rtVal = getInteger(key);
         return Objects.nonNull(rtVal) ? rtVal : defaultVal;
@@ -385,6 +476,12 @@ public class XmemcachedOperationTemplate {
         }
     }
 
+    /**
+     * incr With No Reply.
+     *
+     * @param key the key
+     * @param delta the delta
+     */
     public void incrWithNoReply(String key, long delta) {
         if (delta < 0) {
             throw new XMemcachedOperationException("递增因子必须>=0");
@@ -420,6 +517,14 @@ public class XmemcachedOperationTemplate {
         }
     }
 
+    /**
+     * incr.
+     *
+     * @param key the key
+     * @param delta the delta
+     * @param timeout the timeout
+     * @return the result
+     */
     public Long incr(String key, long delta, Duration timeout) {
         if (delta < 0) {
             throw new XMemcachedOperationException("递增因子必须>=0");
@@ -455,6 +560,12 @@ public class XmemcachedOperationTemplate {
         }
     }
 
+    /**
+     * decr With No Reply.
+     *
+     * @param key the key
+     * @param delta the delta
+     */
     public void decrWithNoReply(String key, long delta) {
         if (delta < 0) {
             throw new XMemcachedOperationException("递减因子必须>=0");
@@ -490,6 +601,14 @@ public class XmemcachedOperationTemplate {
         }
     }
 
+    /**
+     * decr.
+     *
+     * @param key the key
+     * @param delta the delta
+     * @param timeout the timeout
+     * @return the result
+     */
     public Long decr(String key, long delta, Duration timeout) {
         if (delta < 0) {
             throw new XMemcachedOperationException("递减因子必须>=0");
@@ -522,6 +641,13 @@ public class XmemcachedOperationTemplate {
         }
     }
 
+    /**
+     * touch.
+     *
+     * @param key the key
+     * @param seconds the seconds
+     * @return the result
+     */
     public Boolean touch(String key, int seconds) {
         try {
             return xMemcachedClient.touch(key, seconds, optTimeout);
@@ -531,6 +657,13 @@ public class XmemcachedOperationTemplate {
         }
     }
 
+    /**
+     * touch.
+     *
+     * @param key the key
+     * @param timeout the timeout
+     * @return the result
+     */
     public Boolean touch(String key, Duration timeout) {
         try {
             return xMemcachedClient.touch(key, Long.valueOf(timeout.getSeconds()).intValue(), optTimeout);
